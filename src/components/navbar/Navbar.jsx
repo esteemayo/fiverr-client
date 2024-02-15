@@ -46,7 +46,7 @@ const Navbar = () => {
                 )}
                 <span>Orders</span>
                 <span>Messages</span>
-                <button>Logout</button>
+                <span>Logout</span>
               </div>
             </div>
           )}
