@@ -9,12 +9,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
-  const currentUser = {
-    id: 1,
-    username: 'John Doe',
-    isSeller: true,
-  };
-
   const handleToggle = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
@@ -31,6 +25,12 @@ const Navbar = () => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, []);
+
+  const currentUser = {
+    id: 1,
+    username: 'John Doe',
+    isSeller: true,
+  };
 
   return (
     <nav className={navClasses}>
@@ -50,7 +50,10 @@ const Navbar = () => {
           {!currentUser && <button>Join</button>}
           {!!currentUser && (
             <div className='user' onClick={handleToggle}>
-              <img src='' alt='' />
+              <img
+                src='https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600'
+                alt='avatar'
+              />
               <span>{currentUser.username}</span>
               <div className={isOpen ? 'options show' : 'options'}>
                 {currentUser.isSeller && (
