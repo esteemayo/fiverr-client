@@ -4,7 +4,7 @@ import './Slide.scss';
 
 const Slide = ({ slidesToShow, arrowsScroll, children }) => {
   return (
-    <section className='Slide'>
+    <section className='slide'>
       <div className='container'>
         <Slider slidesToShow={slidesToShow} arrowsScroll={arrowsScroll}>
           {children}
