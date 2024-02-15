@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const currentUser = {
     id: 1,
-    username: 'Jogn Doe',
+    username: 'John Doe',
     isSeller: true,
   };
 
