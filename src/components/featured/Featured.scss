@@ -1,4 +1,39 @@
 .featured {
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-primary-green);
+  color: var(--clr-white);
+
   .container {
+    width: 140rem;
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      .search {
+        .searchInput {
+        }
+      }
+
+      .popular {
+        span {
+        }
+
+        button {
+        }
+      }
+    }
+
+    .right {
+    }
   }
 }
