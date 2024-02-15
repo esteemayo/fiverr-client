@@ -1,2 +1,13 @@
 .trustedBy {
+  height: 10rem;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 76rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 }
