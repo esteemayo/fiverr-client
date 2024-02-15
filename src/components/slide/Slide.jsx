@@ -1,7 +1,7 @@
 import './Slide.scss';
 
 const Slide = () => {
-  return <section>Slide</section>;
+  return <section className='Slide'>Slide</section>;
 };
 
 export default Slide;
