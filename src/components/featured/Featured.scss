@@ -27,10 +27,32 @@
         border-radius: 0.5rem;
 
         .searchInput {
+          flex: 1;
           display: flex;
           align-items: center;
           gap: 1rem;
+
+          img {
+            width: 2rem;
+            height: 2rem;
+            margin: 1rem;
+            display: inline-block;
+          }
+
+          input {
+            display: inline-block;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-family: inherit;
+            background-color: transparent;
+            color: #999;
+            caret-color: var(--clr-primary-green);
+          }
         }
+      }
+
+      button {
       }
 
       .popular {
