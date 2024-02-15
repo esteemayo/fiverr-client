@@ -1,7 +1,7 @@
 import './MyGigs.scss';
 
 const MyGigs = () => {
-  return <div className='myGigs'>MyGigs</div>;
+  return <main className='myGigs'>MyGigs</main>;
 };
 
 export default MyGigs;

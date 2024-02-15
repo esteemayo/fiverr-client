@@ -1,7 +1,7 @@
 import './Add.scss';
 
 const Add = () => {
-  return <div className='add'>Add</div>;
+  return <main className='add'>Add</main>;
 };
 
 export default Add;
