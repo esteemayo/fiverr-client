@@ -1,6 +1,9 @@
 :root {
   --clr-white: #fff;
   --clr-black: #000;
+  --clr-primary-green: #1dbf73;
+
+  --default-font-size: 1.6rem;
 }
 
 *,
@@ -19,8 +22,8 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
-  color: #777;
+  font-size: var(--default-font-size);
+  color: var(--clr-black);
   line-height: 1.6;
   cursor: default;
 }
