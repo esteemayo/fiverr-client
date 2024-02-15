@@ -6,8 +6,18 @@
 
   .container {
     width: 76rem;
+    font-weight: 500;
+    color: lightgray;
+
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
+
+    img {
+      height: 5rem;
+      display: inline-block;
+      object-fit: contain;
+    }
   }
 }
