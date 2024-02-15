@@ -19,7 +19,7 @@
       }
 
       .dot {
-        color: var(--clr-primary);
+        color: var(--clr-primary-green);
       }
     }
 
@@ -28,6 +28,20 @@
       align-items: center;
       gap: 2.4rem;
       font-weight: 500;
+
+      span {
+        cursor: pointer;
+      }
+
+      button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        color: var(--clr-white);
+        border: 1px solid var(--clr-white);
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
     }
   }
 }
