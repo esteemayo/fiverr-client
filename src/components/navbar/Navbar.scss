@@ -55,6 +55,12 @@
     }
   }
 
+  hr {
+    width: 100%;
+    height: 0;
+    border: 0.5px solid lightgrey;
+  }
+
   .menu {
     width: 140rem;
     padding: 1rem 0;
