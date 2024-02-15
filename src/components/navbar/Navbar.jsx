@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 
 import './Navbar.scss';
@@ -29,7 +30,9 @@ const Navbar = () => {
     <nav className={isActive ? 'navbar active' : 'navbar'}>
       <div className='container'>
         <div className='logo'>
-          <span className='text'>fiverr</span>
+          <Link to='/'>
+            <span className='text'>fiverr</span>
+          </Link>
           <span className='dot'>.</span>
         </div>
         <div className='links'>
