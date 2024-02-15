@@ -1,7 +1,8 @@
 :root {
   --clr-white: #fff;
   --clr-black: #000;
-  --clr-primary-green: #1dbf73;
+  --clr-primary-green: #013914;
+  --clr-secondary-green: #1dbf73;
 
   --default-font-size: 1.6rem;
 }
