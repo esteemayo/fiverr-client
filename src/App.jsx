@@ -8,8 +8,9 @@ import Register from './pages/register/Register';
 import Home from './pages/home/Home';
 import Messages from './pages/messages/Messages';
 import Gigs from './pages/gigs/Gigs';
-import Orders from './pages/register/orders/Orders';
+import NotFound from './pages/notFound/NotFound';
 import Login from './pages/login/Login';
+import Orders from './pages/register/orders/Orders';
 
 import SharedLayout from './components/sharedLayout/SharedLayout';
 
@@ -62,6 +63,10 @@ function App() {
         {
           path: '',
           element: <Home />,
+        },
+        {
+          path: '*',
+          element: <NotFound />,
         },
       ],
     },
