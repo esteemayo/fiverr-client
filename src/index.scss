@@ -28,3 +28,11 @@ body {
   line-height: 1.6;
   cursor: default;
 }
+
+a {
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
