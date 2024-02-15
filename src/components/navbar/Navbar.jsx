@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import './Navbar.scss';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+
+  const isActiveHandler = useCallback(() => {
+    setIsActive(window.scrollY > 0 ? true : false);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', isActiveHandler);
+    return () => window.removeEventListener('scroll', isActiveHandler);
+  }, []);
 
   return (
     <nav className={isActive ? 'navbar active' : 'navbar'}>
@@ -21,11 +30,15 @@ const Navbar = () => {
           <button>Join</button>
         </div>
       </div>
-      <hr />
-      <div className='menu'>
-        <span>test</span>
-        <span>test</span>
-      </div>
+      {isActive && (
+        <>
+          <hr />
+          <div className='menu'>
+            <span>test</span>
+            <span>test</span>
+          </div>
+        </>
+      )}
     </nav>
   );
 };
