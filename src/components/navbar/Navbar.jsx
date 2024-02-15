@@ -67,7 +67,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {isActive && (
+      {(isActive || pathname !== '/') && (
         <>
           <hr />
           <div className='menu'>
