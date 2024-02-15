@@ -50,9 +50,17 @@
             caret-color: var(--clr-primary-green);
           }
         }
-      }
 
-      button {
+        button {
+          display: inline-block;
+          border: none;
+          outline: none;
+          width: 12rem;
+          height: 5rem;
+          background-color: var(--clr-secondary-green);
+          color: var(--clr-white);
+          cursor: pointer;
+        }
       }
 
       .popular {
