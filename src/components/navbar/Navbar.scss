@@ -19,11 +19,15 @@
       }
 
       .dot {
-        color: #1dbf73;
+        color: var(--clr-primary-green);
       }
     }
 
     .links {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      font-weight: 500;
     }
   }
 }
