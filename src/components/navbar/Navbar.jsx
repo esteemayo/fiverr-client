@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
 import './Navbar.scss';
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <nav className='navbar'>
+    <nav className={isActive ? 'navbar active' : 'navbar'}>
       <div className='container'>
         <div className='logo'>
           <span className='text'>fiverr</span>

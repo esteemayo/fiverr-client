@@ -5,6 +5,11 @@
   background-color: var(--clr-primary-green);
   color: var(--clr-white);
 
+  &.active {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+  }
+
   .container {
     width: 140rem;
     padding: 2rem 0;
