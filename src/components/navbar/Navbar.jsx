@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
-import { useCallback, useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import './Navbar.scss';
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
@@ -21,13 +23,17 @@ const Navbar = () => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
 
+  const navClasses = useMemo(() => {
+    return isActive || pathname !== '/' ? 'navbar active' : 'navbar';
+  }, [isActive, pathname]);
+
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, []);
 
   return (
-    <nav className={isActive ? 'navbar active' : 'navbar'}>
+    <nav className={navClasses}>
       <div className='container'>
         <div className='logo'>
           <Link to='/'>
