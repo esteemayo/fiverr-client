@@ -1,2 +1,24 @@
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 140rem;
+    background-color: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      .text {
+      }
+
+      .dot {
+      }
+    }
+
+    .links {
+    }
+  }
 }
