@@ -64,15 +64,36 @@
       }
 
       .popular {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
         span {
+          text-transform: capitalize;
         }
 
         button {
+          display: inline-block;
+          outline: none;
+          font-size: 1.4rem;
+          padding: 0.5rem 1rem;
+          background-color: transparent;
+          color: currentColor;
+          border: 1px solid var(--clr-white);
+          border-radius: 2rem;
+          cursor: pointer;
         }
       }
     }
 
     .right {
+      height: 100%;
+
+      img {
+        height: 100%;
+        display: inline-block;
+        object-fit: contain;
+      }
     }
   }
 }
