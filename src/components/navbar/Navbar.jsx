@@ -49,12 +49,12 @@ const Navbar = () => {
               <div className={isOpen ? 'options show' : 'options'}>
                 {currentUser.isSeller && (
                   <>
-                    <span>Gigs</span>
-                    <span>Add New Gig</span>
+                    <Link to='/mygigs'>Gigs</Link>
+                    <Link to='/add'>Add New Gig</Link>
                   </>
                 )}
-                <span>Orders</span>
-                <span>Messages</span>
+                <Link to='/orders'>Orders</Link>
+                <Link to='/messages'>Messages</Link>
                 <span>Logout</span>
               </div>
             </div>
@@ -65,8 +65,8 @@ const Navbar = () => {
         <>
           <hr />
           <div className='menu'>
-            <span>test</span>
-            <span>test</span>
+            <Link to='/'>test</Link>
+            <Link to='/'>test</Link>
           </div>
         </>
       )}
