@@ -17,6 +17,11 @@ const Navbar = () => {
           <button>Join</button>
         </div>
       </div>
+      <hr />
+      <div className='menu'>
+        <span>test</span>
+        <span>test</span>
+      </div>
     </nav>
   );
 };
