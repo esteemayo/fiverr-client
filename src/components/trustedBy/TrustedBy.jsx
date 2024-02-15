@@ -14,7 +14,7 @@ const TrustedBy = () => {
           alt='image'
         />
         <img
-          src='https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/nextflix2x.887e47e.png'
+          src='https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/netflix2x.887e47e.png'
           alt='image'
         />
         <img
