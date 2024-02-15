@@ -89,10 +89,13 @@
           color: gray;
           border: 1px solid lightgray;
           border-radius: 1rem;
+          display: none;
 
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
+          &.show {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
         }
       }
     }

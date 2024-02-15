@@ -3,12 +3,18 @@ import { useCallback, useEffect, useState } from 'react';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
+
   const currentUser = {
     id: 1,
     username: 'John Doe',
     isSeller: true,
   };
+
+  const handleToggle = useCallback(() => {
+    setIsOpen((value) => !value);
+  }, []);
 
   const isActiveHandler = useCallback(() => {
     setIsActive(window.scrollY > 0 ? true : false);
@@ -34,10 +40,10 @@ const Navbar = () => {
           {!currentUser.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button>Join</button>}
           {!!currentUser && (
-            <div className='user'>
+            <div className='user' onClick={handleToggle}>
               <img src='' alt='' />
               <span>{currentUser.username}</span>
-              <div className='options'>
+              <div className={isOpen ? 'options show' : 'options'}>
                 {currentUser.isSeller && (
                   <>
                     <span>Gigs</span>
