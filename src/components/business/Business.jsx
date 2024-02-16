@@ -1,8 +1,8 @@
-import './Business.scss';
+import '../features/Features.scss';
 
 const Business = () => {
   return (
-    <section className='business'>
+    <section className='features dark'>
       <div className='container'>
         <div className='item'>
           <h1>fiverr business</h1>
@@ -27,6 +27,7 @@ const Business = () => {
               Manage teamwork and boost productivity with one powerful workspace
             </span>
           </div>
+          <button>Explore Fiverr Business</button>
         </div>
         <div className='item'>
           <img

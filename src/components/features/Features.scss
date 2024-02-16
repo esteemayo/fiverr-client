@@ -4,6 +4,34 @@
   display: flex;
   justify-content: center;
 
+  &.dark {
+    background-color: #0d084d;
+    color: var(--clr-white);
+
+    .container {
+      .item {
+        h1 {
+          color: currentColor;
+        }
+
+        p {
+          color: currentColor;
+          margin-bottom: 2rem;
+        }
+
+        .title {
+          font-weight: 300;
+          font-size: 1.4rem;
+          color: currentColor;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .container {
     width: 140rem;
     display: flex;
@@ -49,12 +77,6 @@
           width: 2.4rem;
           height: 2.4rem;
         }
-
-        span {
-        }
-      }
-
-      p {
       }
 
       video {
