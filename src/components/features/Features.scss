@@ -5,7 +5,7 @@
   justify-content: center;
 
   &.dark {
-    background-color: #0d084d;
+    background-color: var(--clr-blue);
     color: var(--clr-white);
 
     .container {
