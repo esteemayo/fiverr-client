@@ -49,10 +49,8 @@
         align-items: center;
         gap: 2rem;
 
-        h2 {
-        }
-
         span {
+          text-transform: capitalize;
           font-size: 1.3rem;
         }
       }
@@ -63,11 +61,15 @@
         gap: 3rem;
 
         .social {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
         }
 
         .link {
-          span {
-          }
+          display: flex;
+          align-items: center;
+          gap: 1rem;
         }
       }
     }
