@@ -28,8 +28,15 @@
         }
 
         span {
+          font-weight: 300;
         }
       }
+    }
+
+    hr {
+      margin: 5rem 0;
+      height: 0;
+      border: 1px solid rgb(237, 235, 235);
     }
 
     .bottom {
