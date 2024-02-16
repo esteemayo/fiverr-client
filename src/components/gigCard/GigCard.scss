@@ -23,6 +23,9 @@
       gap: 1rem;
 
       img {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
       }
 
       span {
@@ -30,10 +33,17 @@
     }
 
     p {
+      color: #111;
     }
 
     .star {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
       img {
+        width: 1.4rem;
+        height: 1.4rem;
       }
 
       span {
