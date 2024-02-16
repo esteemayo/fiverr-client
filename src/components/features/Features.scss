@@ -40,11 +40,14 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+
         font-weight: 500;
         font-size: 1.8rem;
         color: gray;
 
         img {
+          width: 2.4rem;
+          height: 2.4rem;
         }
 
         span {
@@ -52,6 +55,10 @@
       }
 
       p {
+      }
+
+      video {
+        width: 72rem;
       }
     }
   }
