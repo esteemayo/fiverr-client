@@ -53,10 +53,15 @@
         }
 
         span {
+          font-size: 1.3rem;
         }
       }
 
       .right {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
         .social {
         }
 
