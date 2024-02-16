@@ -54,7 +54,18 @@
     }
   }
 
+  hr {
+    height: 0;
+    border: 0.5px solid lightgray;
+  }
+
   .details {
+    padding: 1rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     img {
     }
 
