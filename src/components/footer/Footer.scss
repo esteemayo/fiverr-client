@@ -1,2 +1,45 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  color: #999;
+  margin: 5rem 0;
+
+  img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .container {
+    width: 140rem;
+
+    .top {
+      .item {
+        h2 {
+        }
+
+        span {
+        }
+      }
+    }
+
+    .bottom {
+      .left {
+        h2 {
+        }
+
+        span {
+        }
+      }
+
+      .right {
+        .social {
+        }
+
+        .link {
+          span {
+          }
+        }
+      }
+    }
+  }
 }
