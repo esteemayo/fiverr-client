@@ -1,2 +1,50 @@
 .gigs {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 140rem;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .breadcrumbs {
+    }
+    h1 {
+    }
+
+    p {
+    }
+
+    .menu {
+      .left {
+        span {
+        }
+
+        input {
+        }
+
+        button {
+        }
+      }
+
+      .right {
+        .sortBy {
+        }
+
+        .sortType {
+        }
+
+        img {
+        }
+
+        .rightMenu {
+          span {
+          }
+        }
+      }
+    }
+  }
 }
