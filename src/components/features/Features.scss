@@ -5,9 +5,36 @@
   justify-content: center;
 
   .container {
-    width: 72rem;
+    width: 140rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 
     .item {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &:first-child {
+        flex: 2;
+      }
+
+      &:last-child {
+        flex: 3;
+      }
+
+      h1 {
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 1.8rem;
+        color: gray;
+        line-height: 2.8rem;
+      }
+
       .title {
         img {
         }
