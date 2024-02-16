@@ -17,9 +17,6 @@
       color: #555;
     }
 
-    h1 {
-    }
-
     p {
       font-weight: 300;
       color: #999;
@@ -35,9 +32,6 @@
         align-items: center;
         gap: 1rem;
         color: #555;
-
-        span {
-        }
 
         input {
           font-family: inherit;
@@ -101,6 +95,7 @@
           gap: 2rem;
 
           span {
+            cursor: pointer;
           }
         }
       }
