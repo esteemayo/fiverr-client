@@ -11,22 +11,24 @@ import { cards, projects } from '../../data';
 import './Home.scss';
 
 const Home = () => {
-  return <main className='home'>
-    <Featured />
-    <TrustedBy />
-    <Slide arrowsScroll={5} slidesToShow={5} >
-      {cards.map((item) => {
-        return <CategoryCard key={item.id} {...item} />;
-      })}
-    </Slide>
-    <Features />
-    <Business />
-    <Slide arrowsScroll={4} slidesToShow={4} >
-      {projects.map((item) => {
-        return <ProjectCard key={item.id} {...item} />;
-      })}
-    </Slide>
-  </main>;
+  return (
+    <main className='home'>
+      <Featured />
+      <TrustedBy />
+      <Slide arrowsScroll={5} slidesToShow={5} >
+        {cards.map((item) => {
+          return <CategoryCard key={item.id} {...item} />;
+        })}
+      </Slide>
+      <Features />
+      <Business />
+      <Slide arrowsScroll={4} slidesToShow={4} >
+        {projects.map((item) => {
+          return <ProjectCard key={item.id} {...item} />;
+        })}
+      </Slide>
+    </main>
+  );
 };
 
 export default Home;
