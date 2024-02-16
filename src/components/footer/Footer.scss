@@ -40,7 +40,15 @@
     }
 
     .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       .left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
         h2 {
         }
 
