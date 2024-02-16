@@ -67,13 +67,22 @@
       }
 
       .right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
         .sortBy {
+          font-weight: 300;
+          color: #555;
         }
 
         .sortType {
+          font-weight: 500;
         }
 
         img {
+          width: 1.5rem;
+          cursor: pointer;
         }
 
         .rightMenu {
