@@ -21,8 +21,10 @@ const GigCard = ({ id, img, pp, desc, star, price, username }) => {
         <hr />
         <div className='details'>
           <img src='/img/heart.png' alt='heart icon' />
-          <span>STARTING AT</span>
-          <h2>${price}</h2>
+          <div className='price'>
+            <span>STARTING AT</span>
+            <h2>${price}</h2>
+          </div>
         </div>
       </article>
     </Link>

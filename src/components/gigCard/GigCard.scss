@@ -27,9 +27,6 @@
         height: 2.6rem;
         border-radius: 50%;
       }
-
-      span {
-      }
     }
 
     p {
@@ -67,12 +64,23 @@
     justify-content: space-between;
 
     img {
+      width: 1.6rem;
+      height: 1.6rem;
+      cursor: pointer;
     }
 
-    span {
-    }
+    .price {
+      span {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: #999;
+      }
 
-    h2 {
+      h2 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #555;
+      }
     }
   }
 }
