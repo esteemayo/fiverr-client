@@ -33,9 +33,17 @@
         font-size: 1.8rem;
         color: gray;
         line-height: 2.8rem;
+        letter-spacing: 1px;
       }
 
       .title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: gray;
+
         img {
         }
 
