@@ -22,6 +22,9 @@
         gap: 2rem;
 
         h2 {
+          text-transform: capitalize;
+          font-size: var(--default-font-size);
+          color: #555;
         }
 
         span {
