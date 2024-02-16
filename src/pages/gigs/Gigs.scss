@@ -11,14 +11,25 @@
     gap: 1.5rem;
 
     .breadcrumbs {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: #555;
     }
+
     h1 {
     }
 
     p {
+      font-weight: 300;
+      color: #999;
     }
 
     .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       .left {
         span {
         }
