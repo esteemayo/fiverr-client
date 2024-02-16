@@ -21,7 +21,7 @@ const Home = () => {
     </Slide>
     <Features />
     <Business />
-    <Slide arrowsScroll={5} slidesToShow={5} >
+    <Slide arrowsScroll={4} slidesToShow={4} >
       {projects.map((item) => {
         return <ProjectCard key={item.id} {...item} />;
       })}

@@ -1,2 +1,42 @@
 .projectCard {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 1.6rem -0.6rem rgba(0, 0, 0, 0.59);
+  box-shadow: 0 0 1.6rem -0.6rem rgba(0, 0, 0, 0.59);
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 70%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .texts {
+      h2 {
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
 }
