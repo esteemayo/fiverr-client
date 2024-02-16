@@ -70,6 +70,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        position: relative;
 
         .sortBy {
           font-weight: 300;
@@ -86,6 +87,12 @@
         }
 
         .rightMenu {
+          position: absolute;
+          padding: 2rem;
+          background-color: var(--clr-white);
+          border: 1px solid lightgreen;
+          border-radius: 0.5rem;
+
           span {
           }
         }
