@@ -31,13 +31,38 @@
       justify-content: space-between;
 
       .left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #555;
+
         span {
         }
 
         input {
+          font-family: inherit;
+          padding: 0.5rem;
+          outline: none;
+          color: #999;
+          border: 1px solid lightgray;
+          caret-color: var(--clr-secondary-green);
+
+          &::placeholder {
+            color: gray;
+          }
         }
 
         button {
+          display: inline-block;
+          border: none;
+          outline: none;
+          text-transform: capitalize;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          background-color: var(--clr-secondary-green);
+          color: var(--clr-white);
+          border-radius: 0.5rem;
+          cursor: pointer;
         }
       }
 
