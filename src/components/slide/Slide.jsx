@@ -2,7 +2,7 @@ import Slider from 'infinite-react-carousel';
 
 import './Slide.scss';
 
-const Slide = ({ slidesToShow, arrowsScroll, children }) => {
+const Slide = ({ arrowsScroll, slidesToShow, children }) => {
   return (
     <section className='slide'>
       <div className='container'>
