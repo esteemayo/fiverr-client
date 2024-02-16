@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 
+import { gigs } from '../../data';
 import GigCard from '../../components/gigCard/GigCard';
 
 import './Gigs.scss';
@@ -51,6 +52,11 @@ const Gigs = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className='cards'>
+          {gigs.map((item) => {
+            return <GigCard key={item.id} {...item} />;
+          })}
         </div>
       </div>
     </main>
