@@ -87,11 +87,18 @@
         }
 
         .rightMenu {
-          position: absolute;
           padding: 2rem;
           background-color: var(--clr-white);
-          border: 1px solid lightgreen;
+          color: #555;
+          border: 1px solid lightgray;
           border-radius: 0.5rem;
+          position: absolute;
+          top: 3rem;
+          right: 0;
+
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
 
           span {
           }
