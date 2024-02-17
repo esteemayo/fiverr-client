@@ -233,6 +233,43 @@
 
     .right {
       flex: 1;
+      border: 1px solid lightgray;
+      padding: 2rem;
+      border-radius: 0.5rem;
+
+      .price {
+        h3 {
+        }
+
+        h2 {
+        }
+      }
+
+      p {
+      }
+
+      .details {
+        .item {
+          img {
+          }
+
+          span {
+          }
+        }
+      }
+
+      .features {
+        .item {
+          img {
+          }
+
+          span {
+          }
+        }
+      }
+
+      button {
+      }
     }
   }
 }
