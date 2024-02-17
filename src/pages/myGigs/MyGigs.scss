@@ -12,6 +12,17 @@
 
       h1 {
       }
+
+      button {
+        display: inline-block;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        background-color: var(--clr-secondary-green);
+        color: var(--clr-white);
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
     }
 
     table {
