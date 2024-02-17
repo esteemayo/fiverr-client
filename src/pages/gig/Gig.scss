@@ -1,2 +1,27 @@
 .gig {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 140rem;
+
+    .left {
+      .breadCrumbs {
+      }
+
+      h1 {
+      }
+
+      .user {
+        img {
+        }
+
+        span {
+        }
+      }
+    }
+
+    .right {
+    }
+  }
 }
