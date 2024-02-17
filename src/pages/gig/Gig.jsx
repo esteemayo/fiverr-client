@@ -15,6 +15,7 @@ const Gig = () => {
             <img
               src='https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/23905bcdab16b427c8612965f318b4e0-1660400198734/8275baf4-be7e-4120-8a7a-ddf0fde94600.png'
               alt='avatar'
+              className='pp'
             />
             <span>John Doe</span>
             <div className='stars'>
@@ -61,6 +62,7 @@ const Gig = () => {
               <img
                 src='https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/23905bcdab16b427c8612965f318b4e0-1660400198734/8275baf4-be7e-4120-8a7a-ddf0fde94600.png'
                 alt='avatar'
+                className='pp'
               />
               <div className='info'>
                 <span>John Doe</span>
@@ -114,6 +116,7 @@ const Gig = () => {
                 <img
                   src='https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/23905bcdab16b427c8612965f318b4e0-1660400198734/8275baf4-be7e-4120-8a7a-ddf0fde94600.png'
                   alt='avatar'
+                  className='pp'
                 />
                 <div className='info'>
                   <span>John Doe</span>
@@ -156,6 +159,7 @@ const Gig = () => {
                 <img
                   src='https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/23905bcdab16b427c8612965f318b4e0-1660400198734/8275baf4-be7e-4120-8a7a-ddf0fde94600.png'
                   alt='avatar'
+                  className='pp'
                 />
                 <div className='info'>
                   <span>John Doe</span>
@@ -198,6 +202,7 @@ const Gig = () => {
                 <img
                   src='https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/23905bcdab16b427c8612965f318b4e0-1660400198734/8275baf4-be7e-4120-8a7a-ddf0fde94600.png'
                   alt='avatar'
+                  className='pp'
                 />
                 <div className='info'>
                   <span>John Doe</span>

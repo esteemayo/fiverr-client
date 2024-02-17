@@ -15,13 +15,21 @@
       gap: 2rem;
 
       .breadCrumbs {
-      }
-
-      h1 {
+        font-weight: 300;
+        font-size: 1.3rem;
+        color: #555;
       }
 
       .user {
-        img {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .pp {
+          width: 3.2rem;
+          height: 3.2rem;
+          border-radius: 50%;
+          display: inline-block;
         }
 
         span {
