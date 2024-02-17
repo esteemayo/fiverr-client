@@ -169,6 +169,25 @@
           flex-direction: column;
           gap: 2rem;
           margin: 2rem 0;
+
+          .user {
+            display: flex;
+            align-items: center;
+
+            .pp {
+              width: 5rem;
+              height: 5rem;
+              display: block;
+              border-radius: 50%;
+            }
+
+            .country {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              color: gray;
+            }
+          }
         }
       }
     }
