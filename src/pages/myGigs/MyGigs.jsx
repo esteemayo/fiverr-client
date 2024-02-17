@@ -8,7 +8,9 @@ const MyGigs = () => {
       <div className='container'>
         <div className='title'>
           <h1>Gigs</h1>
-          <Link to='/add'>Add new gig</Link>
+          <Link to='/add'>
+            <button>Add new gig</button>
+          </Link>
         </div>
         <table>
           <thead>

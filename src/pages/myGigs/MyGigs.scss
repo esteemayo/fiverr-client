@@ -3,8 +3,13 @@
   justify-content: center;
   .container {
     width: 140rem;
+    padding: 5rem 0;
 
     .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       h1 {
       }
     }
