@@ -141,13 +141,23 @@
             justify-content: space-between;
 
             .item {
-              width: 30rem;
+              width: 40rem;
               display: flex;
               flex-direction: column;
               gap: 1rem;
               margin-bottom: 2rem;
+
+              .title {
+                font-weight: 300;
+              }
             }
           }
+        }
+
+        hr {
+          height: 0;
+          border: 0.5px solid rgb(247, 246, 246);
+          margin-bottom: 2rem;
         }
       }
     }
