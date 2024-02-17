@@ -284,8 +284,17 @@
         }
       }
 
-      .features {
+      .feature {
+        display: flex;
+        flex-direction: column;
+
         .item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-weight: 300;
+          color: gray;
+
           img {
           }
 

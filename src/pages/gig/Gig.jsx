@@ -262,7 +262,7 @@ const Gig = () => {
               <span>3 Revisions</span>
             </div>
           </div>
-          <div className='features'>
+          <div className='feature'>
             <div className='item'>
               <img src='/img/greencheck.png' alt='greencheck icon' />
               <span>Prompt writing</span>
