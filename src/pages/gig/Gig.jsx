@@ -146,7 +146,7 @@ const Gig = () => {
                 above and beyond my expectations. I absolutely recommend this
                 gig, and know already that I'll be using it again very very soon
               </p>
-              <div className='help'>
+              <div className='helpful'>
                 <span>Helpful?</span>
                 <img src='/img/like.png' alt='like icon' />
                 <span>Yes</span>
@@ -189,7 +189,7 @@ const Gig = () => {
                 above and beyond my expectations. I absolutely recommend this
                 gig, and know already that I'll be using it again very very soon
               </p>
-              <div className='help'>
+              <div className='helpful'>
                 <span>Helpful?</span>
                 <img src='/img/like.png' alt='like icon' />
                 <span>Yes</span>
@@ -232,7 +232,7 @@ const Gig = () => {
                 above and beyond my expectations. I absolutely recommend this
                 gig, and know already that I'll be using it again very very soon
               </p>
-              <div className='help'>
+              <div className='helpful'>
                 <span>Helpful?</span>
                 <img src='/img/like.png' alt='like icon' />
                 <span>Yes</span>
