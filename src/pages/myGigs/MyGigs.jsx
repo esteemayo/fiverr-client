@@ -27,6 +27,7 @@ const MyGigs = () => {
               <img
                 src='https://fiverr-res.cloudinary.com/images/t_small_thumbnail,q_auto,f_auto/gigs/299984800/original/1adee721799ebf42432d37f152c4bf5c9d77d080/angular-web-projects-and-websites.png'
                 alt='image'
+                className='img'
               />
             </td>
             <td>Gig 1</td>
