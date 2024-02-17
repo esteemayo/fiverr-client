@@ -24,7 +24,7 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener('scroll', isActiveHandler);
     return () => window.removeEventListener('scroll', isActiveHandler);
-  }, []);
+  }, [isActiveHandler]);
 
   const currentUser = {
     id: 1,
