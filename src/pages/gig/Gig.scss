@@ -4,8 +4,12 @@
 
   .container {
     width: 140rem;
+    padding: 3rem 0;
+    display: flex;
+    gap: 5rem;
 
     .left {
+      flex: 2;
       .breadCrumbs {
       }
 
@@ -22,6 +26,7 @@
     }
 
     .right {
+      flex: 1;
     }
   }
 }

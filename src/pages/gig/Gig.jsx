@@ -237,7 +237,7 @@ const Gig = () => {
             <hr />
           </div>
         </div>
-        <div className='right'></div>
+        <div className='right'>Right</div>
       </div>
     </main>
   );
