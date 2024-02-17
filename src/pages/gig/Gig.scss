@@ -15,6 +15,7 @@
       gap: 2rem;
 
       .breadCrumbs {
+        text-transform: uppercase;
         font-weight: 300;
         font-size: 1.3rem;
         color: #555;
@@ -52,6 +53,13 @@
             font-size: 1.4rem;
             color: #ffc108;
           }
+        }
+      }
+
+      .slider {
+        img {
+          max-height: 50rem;
+          object-fit: contain;
         }
       }
     }

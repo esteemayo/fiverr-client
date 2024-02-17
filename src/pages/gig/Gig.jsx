@@ -27,7 +27,7 @@ const Gig = () => {
               <span>5</span>
             </div>
           </div>
-          <Slide arrowsScroll={1} slidesToShow={1}>
+          <Slide arrowsScroll={1} slidesToShow={1} className='slider'>
             <img
               src='https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/270408589/original/ada03fe47176c7222c59b3cbc8373827fdf714b0/create-ai-generated-art-for-you.png'
               alt='image'
