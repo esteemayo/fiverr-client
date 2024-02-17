@@ -264,8 +264,18 @@
       }
 
       .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+
         .item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
           img {
+            width: 1rem;
           }
 
           span {
