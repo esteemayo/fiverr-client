@@ -33,7 +33,7 @@ const MyGigs = () => {
             <td>$88</td>
             <td>123</td>
             <td>
-              <img src='/img/delete.png' alt='delete icon' />
+              <img src='/img/delete.png' alt='delete icon' className='delete' />
             </td>
           </tbody>
         </table>

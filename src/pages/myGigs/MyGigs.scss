@@ -26,6 +26,20 @@
     }
 
     table {
+      width: 100%;
+
+      tr {
+        height: 5rem;
+
+        td {
+          img {
+            width: 5rem;
+            height: 2.5rem;
+            display: block;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }
