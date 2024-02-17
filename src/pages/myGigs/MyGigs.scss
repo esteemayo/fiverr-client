@@ -1,2 +1,15 @@
 .myGigs {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 140rem;
+
+    .title {
+      h1 {
+      }
+    }
+
+    table {
+    }
+  }
 }
