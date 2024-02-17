@@ -174,18 +174,24 @@
             display: flex;
             align-items: center;
 
-            .pp {
-              width: 5rem;
-              height: 5rem;
-              display: block;
-              border-radius: 50%;
-            }
+            .info {
+              .pp {
+                width: 5rem;
+                height: 5rem;
+                display: block;
+                border-radius: 50%;
+              }
 
-            .country {
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-              color: gray;
+              .country {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                color: gray;
+
+                img {
+                  width: 2rem;
+                }
+              }
             }
           }
         }
