@@ -84,6 +84,7 @@ const Navbar = () => {
             <Link to='/'>Business</Link>
             <Link to='/'>Lifestyle</Link>
           </div>
+          <hr />
         </>
       )}
     </nav>
