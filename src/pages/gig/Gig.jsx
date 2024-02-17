@@ -258,7 +258,7 @@ const Gig = () => {
               <span>2 days delivery</span>
             </div>
             <div className='item'>
-              <img src='/img/recyle.png' alt='recycle icon' />
+              <img src='/img/recycle.png' alt='recycle icon' />
               <span>3 Revisions</span>
             </div>
           </div>
