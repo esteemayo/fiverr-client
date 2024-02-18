@@ -21,7 +21,7 @@ const Messages = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className='active'>
               <td>John Doe</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
@@ -29,7 +29,7 @@ const Messages = () => {
                 <button>Mark as Read</button>
               </td>
             </tr>
-            <tr>
+            <tr className='active'>
               <td>Mary Doe</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>

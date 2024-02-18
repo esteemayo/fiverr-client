@@ -20,7 +20,11 @@
       width: 100%;
 
       tr {
-        height: 5rem;
+        height: 10rem;
+
+        &.active {
+          background-color: #1dbf730f;
+        }
 
         th {
           text-align: left;
@@ -40,10 +44,6 @@
             border-radius: 0.5rem;
             cursor: pointer;
           }
-        }
-
-        &:nth-child(even) {
-          background-color: #1dbf730f;
         }
       }
     }
