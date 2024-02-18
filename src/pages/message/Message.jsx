@@ -83,6 +83,7 @@ const Message = () => {
             </p>
           </div>
         </section>
+        <hr />
         <section className='write'>
           <textarea
             name=''
