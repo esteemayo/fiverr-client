@@ -14,17 +14,6 @@
       h1 {
         text-transform: capitalize;
       }
-
-      button {
-        display: inline-block;
-        border: none;
-        outline: none;
-        padding: 1rem;
-        background-color: var(--clr-secondary-green);
-        color: var(--clr-white);
-        border-radius: 0.5rem;
-        cursor: pointer;
-      }
     }
 
     table {
@@ -46,8 +35,14 @@
             object-fit: cover;
           }
 
-          .message {
-            width: 2rem;
+          button {
+            display: inline-block;
+            border: none;
+            outline: none;
+            padding: 1rem;
+            background-color: var(--clr-secondary-green);
+            color: var(--clr-white);
+            border-radius: 0.5rem;
             cursor: pointer;
           }
         }
