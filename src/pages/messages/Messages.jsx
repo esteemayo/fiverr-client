@@ -41,41 +41,26 @@ const Messages = () => {
               <td>Alice Doe</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
             </tr>
             <tr>
               <td>Christian Vega</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
             </tr>
             <tr>
               <td>Lourdes Browning</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
             </tr>
             <tr>
               <td>Katie Powell</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
             </tr>
             <tr>
               <td>Harry Rodriques</td>
               <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
             </tr>
           </tbody>
         </table>
