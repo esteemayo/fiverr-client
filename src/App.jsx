@@ -61,10 +61,6 @@ function App() {
           element: <Register />,
         },
         {
-          path: '',
-          element: <Home />,
-        },
-        {
           path: '*',
           element: <NotFound />,
         },
