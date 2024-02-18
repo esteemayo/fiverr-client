@@ -82,6 +82,10 @@
         border-radius: 1rem;
         caret-color: var(--clr-secondary-green);
         resize: none;
+
+        &::placeholder {
+          color: #ccc;
+        }
       }
     }
   }
