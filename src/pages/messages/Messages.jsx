@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { excerpts } from '../../utils';
 
 import './Messages.scss';
@@ -23,7 +25,9 @@ const Messages = () => {
           <tbody>
             <tr className='active'>
               <td>John Doe</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -31,7 +35,9 @@ const Messages = () => {
             </tr>
             <tr className='active'>
               <td>Mary Doe</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -39,27 +45,37 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Alice Doe</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
             </tr>
             <tr>
               <td>Christian Vega</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
             </tr>
             <tr>
               <td>Lourdes Browning</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
             </tr>
             <tr>
               <td>Katie Powell</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
             </tr>
             <tr>
               <td>Harry Rodriques</td>
-              <td>{excerpts(message, 100)}</td>
+              <td>
+                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
+              </td>
               <td>1 day ago</td>
             </tr>
           </tbody>
