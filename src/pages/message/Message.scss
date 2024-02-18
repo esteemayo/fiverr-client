@@ -62,6 +62,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      textarea {
+        display: inline-block;
+        outline: none;
+        font-family: inherit;
+        font-size: var(--default-font-size);
+        width: 80%;
+        padding: 1rem;
+        background-color: transparent;
+        color: #999;
+        border: 1px solid lightgray;
+        border-radius: 1rem;
+        caret-color: var(--clr-secondary-green);
+        resize: none;
+      }
     }
   }
 }
