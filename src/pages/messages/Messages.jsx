@@ -1,3 +1,5 @@
+import { excerpts } from '../../utils';
+
 import './Messages.scss';
 
 const Messages = () => {
@@ -21,7 +23,7 @@ const Messages = () => {
           <tbody>
             <tr>
               <td>John Doe</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -29,7 +31,7 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Mary Doe</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -37,7 +39,7 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Alice Doe</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -45,7 +47,7 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Christian Vega</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -53,7 +55,7 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Lourdes Browning</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -61,7 +63,7 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Katie Powell</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
@@ -69,7 +71,7 @@ const Messages = () => {
             </tr>
             <tr>
               <td>Harry Rodriques</td>
-              <td>{message}</td>
+              <td>{excerpts(message, 100)}</td>
               <td>1 day ago</td>
               <td>
                 <button>Mark as Read</button>
