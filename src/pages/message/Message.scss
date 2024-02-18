@@ -1,2 +1,28 @@
 .message {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 120rem;
+    margin: 5rem;
+
+    .breadCrumbs {
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: #555;
+    }
+
+    .messages {
+      .item {
+        img {
+        }
+
+        p {
+        }
+      }
+    }
+
+    .write {
+    }
+  }
 }
