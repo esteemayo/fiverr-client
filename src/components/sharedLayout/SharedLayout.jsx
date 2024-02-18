@@ -7,11 +7,11 @@ import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 const SharedLayout = () => {
   return (
     <>
+      <Navbar />
       <ErrorBoundary>
-        <Navbar />
         <Outlet />
-        <Footer />
       </ErrorBoundary>
+      <Footer />
     </>
   );
 };
