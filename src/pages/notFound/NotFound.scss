@@ -1,2 +1,10 @@
 .notFound {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 140rem;
+    height: 70vh;
+    padding: 5rem 0;
+  }
 }
