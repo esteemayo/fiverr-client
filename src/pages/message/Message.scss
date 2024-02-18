@@ -24,6 +24,11 @@
       gap: 2rem;
 
       .item {
+        display: flex;
+        gap: 2rem;
+        max-width: 60rem;
+        font-size: 1.8rem;
+
         img {
         }
 
