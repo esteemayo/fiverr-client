@@ -14,6 +14,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      h1 {
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: inherit;
+        line-height: 1.2;
+      }
     }
   }
 }
