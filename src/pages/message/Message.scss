@@ -29,6 +29,17 @@
         max-width: 60rem;
         font-size: 1.8rem;
 
+        &.owner {
+          flex-direction: row-reverse;
+          align-self: flex-end;
+
+          p {
+            border-radius: 2rem 0 2rem 2rem;
+            background-color: royalblue;
+            color: var(--clr-white);
+          }
+        }
+
         img {
           width: 4rem;
           height: 4rem;
