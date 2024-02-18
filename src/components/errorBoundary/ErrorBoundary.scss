@@ -1,2 +1,11 @@
 .errorBoundary {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 140rem;
+    padding: 5rem 0;
+  }
 }
