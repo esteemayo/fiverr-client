@@ -48,6 +48,10 @@
             cursor: pointer;
           }
         }
+
+        &:nth-child(even) {
+          background-color: #1dbf730f;
+        }
       }
     }
   }
