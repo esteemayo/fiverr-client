@@ -12,7 +12,7 @@ const Add = () => {
               <input
                 type='text'
                 id='title'
-                placeholder="e.g. I will do something I'm realy good at"
+                placeholder="e.g. I will do something I'm really good at"
               />
             </div>
             <div className='formGroup'>
