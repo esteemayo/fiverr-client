@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Footer.scss';
 
@@ -86,7 +87,9 @@ const Footer = () => {
         <hr />
         <div className='bottom'>
           <div className='left'>
-            <h2>fiverr</h2>
+            <Link to='/'>
+              <h2>fiverr</h2>
+            </Link>
             <span>© Fiverr International Ltd. {year}</span>
           </div>
           <div className='right'>
