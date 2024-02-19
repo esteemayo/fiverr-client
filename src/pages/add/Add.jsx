@@ -70,7 +70,7 @@ const Add = () => {
             </div>
             <div className='formGroup'>
               <label htmlFor='revision'>Revision Number</label>
-              <input type='text' id='revision' placeholder='' />
+              <input type='number' id='revision' />
             </div>
             <div className='formGroup'>
               <label htmlFor='features'>Add Features</label>
