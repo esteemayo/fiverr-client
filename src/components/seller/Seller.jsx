@@ -1,8 +1,10 @@
+import Star from '../star/Star';
+
 import './Seller.scss';
 
 const Seller = () => {
   return (
-    <div className='seller'>
+    <section className='seller'>
       <h2>About the seller</h2>
       <div className='user'>
         <img
@@ -47,7 +49,7 @@ const Seller = () => {
           result.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
