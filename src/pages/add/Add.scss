@@ -38,6 +38,12 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 1rem;
+
+        label {
+          display: inline-block;
+          font-size: 1.8rem;
+          color: gray;
+        }
       }
     }
   }
