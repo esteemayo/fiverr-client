@@ -1,0 +1,61 @@
+.orders {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 140rem;
+    padding: 5rem 0;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h1 {
+        text-transform: capitalize;
+      }
+
+      button {
+        display: inline-block;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        background-color: var(--clr-secondary-green);
+        color: var(--clr-white);
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        height: 5rem;
+
+        th {
+          text-align: left;
+          text-transform: capitalize;
+        }
+
+        td {
+          .img {
+            width: 5rem;
+            height: 2.5rem;
+            display: block;
+            object-fit: cover;
+          }
+
+          .message {
+            width: 2rem;
+            cursor: pointer;
+          }
+        }
+
+        &:nth-child(2n) {
+          background-color: #1dbf730f;
+        }
+      }
+    }
+  }
+}
