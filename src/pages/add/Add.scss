@@ -19,6 +19,14 @@
       justify-content: space-between;
       gap: 10rem;
 
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
       .left {
       }
 
