@@ -1,2 +1,9 @@
 .login {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 120rem;
+    padding: 5rem 0;
+  }
 }
