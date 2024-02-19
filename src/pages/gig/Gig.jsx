@@ -1,4 +1,5 @@
 import Slide from '../../components/slide/Slide';
+import Star from '../../components/star/Star';
 import Reviews from '../../components/reviews/Reviews';
 
 import './Gig.scss';
@@ -19,14 +20,7 @@ const Gig = () => {
               className='pp'
             />
             <span>John Doe</span>
-            <div className='stars'>
-              <img src='/img/star.png' alt='star icon' />
-              <img src='/img/star.png' alt='star icon' />
-              <img src='/img/star.png' alt='star icon' />
-              <img src='/img/star.png' alt='star icon' />
-              <img src='/img/star.png' alt='star icon' />
-              <span>5</span>
-            </div>
+            <Star />
           </div>
           <Slide arrowsScroll={1} slidesToShow={1} className='slider'>
             <img
@@ -68,14 +62,7 @@ const Gig = () => {
               />
               <div className='info'>
                 <span>John Doe</span>
-                <div className='stars'>
-                  <img src='/img/star.png' alt='star icon' />
-                  <img src='/img/star.png' alt='star icon' />
-                  <img src='/img/star.png' alt='star icon' />
-                  <img src='/img/star.png' alt='star icon' />
-                  <img src='/img/star.png' alt='star icon' />
-                  <span>5</span>
-                </div>
+                <Star />
                 <button>Contact me</button>
               </div>
             </div>
