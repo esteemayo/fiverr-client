@@ -1,3 +1,5 @@
+import Star from '../star/Star';
+
 import './ReviewItem.scss';
 
 const ReviewItem = () => {
@@ -20,14 +22,7 @@ const ReviewItem = () => {
           </div>
         </div>
       </div>
-      <div className='stars'>
-        <img src='/img/star.png' alt='star icon' />
-        <img src='/img/star.png' alt='star icon' />
-        <img src='/img/star.png' alt='star icon' />
-        <img src='/img/star.png' alt='star icon' />
-        <img src='/img/star.png' alt='star icon' />
-        <span>5</span>
-      </div>
+      <Star />
       <p>
         I just want to say that art_with_ai was the first, and after this, the
         only artist I'll be using on Fiverr. Communication was amazing, each and
