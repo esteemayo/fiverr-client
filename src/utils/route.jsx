@@ -2,15 +2,15 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import MyGigs from '../pages/myGigs/MyGigs';
 import Add from '../pages/add/Add';
-import Message from '../pages/message/Message';
-import Gig from '../pages/gig/Gig';
-import Register from '../pages/register/Register';
-import Home from '../pages/home/Home';
-import Messages from '../pages/messages/Messages';
-import Gigs from '../pages/gigs/Gigs';
-import NotFound from '../pages/notFound/NotFound';
-import Login from '../pages/login/Login';
 import Orders from '../pages/orders/Orders';
+import Gig from '../pages/gig/Gig';
+import Message from '../pages/message/Message';
+import Home from '../pages/home/Home';
+import Register from '../pages/register/Register';
+import Gigs from '../pages/gigs/Gigs';
+import Messages from '../pages/messages/Messages';
+import Login from '../pages/login/Login';
+import NotFound from '../pages/notFound/NotFound';
 
 import SharedLayout from '../components/sharedLayout/SharedLayout';
 
