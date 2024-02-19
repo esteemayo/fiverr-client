@@ -1,7 +1,11 @@
 import './Register.scss';
 
 const Register = () => {
-  return <div className='register'>Register</div>;
+  return (
+    <main className='register'>
+      <div className='container'>Register</div>
+    </main>
+  );
 };
 
 export default Register;
