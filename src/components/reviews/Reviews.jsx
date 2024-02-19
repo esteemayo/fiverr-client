@@ -7,11 +7,8 @@ const Reviews = () => {
     <section className='reviews'>
       <h2>Reviews</h2>
       <ReviewItem />
-      <hr />
       <ReviewItem />
-      <hr />
       <ReviewItem />
-      <hr />
     </section>
   );
 };
