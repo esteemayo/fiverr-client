@@ -1,0 +1,16 @@
+.stars {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #ffc108;
+  }
+}
