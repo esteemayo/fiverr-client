@@ -1,0 +1,68 @@
+.reviews {
+  margin-top: 5rem;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+
+    .user {
+      display: flex;
+      align-items: center;
+
+      .info {
+        .pp {
+          width: 5rem;
+          height: 5rem;
+          display: block;
+          border-radius: 50%;
+        }
+
+        .country {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          color: gray;
+
+          img {
+            width: 2rem;
+          }
+        }
+      }
+    }
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #ffc108;
+      }
+    }
+
+    .helpful {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 1.4rem;
+      }
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid rgb(247, 246, 246);
+    margin: 5rem 0;
+  }
+}
