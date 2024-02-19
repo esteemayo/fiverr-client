@@ -25,11 +25,11 @@ const Add = () => {
               </select>
             </div>
             <div className='formGroup'>
-              <label htmlFor='file'>Cover image</label>
+              <label htmlFor='file'>Cover Image</label>
               <input type='file' id='file' accept='image/*' />
             </div>
             <div className='formGroup'>
-              <label htmlFor='images'>upload images</label>
+              <label htmlFor='images'>upload Images</label>
               <input type='file' id='images' accept='image/*' multiple />
             </div>
             <div className='formGroup'>
@@ -46,7 +46,7 @@ const Add = () => {
           </div>
           <div className='right'>
             <div className='formGroup'>
-              <label htmlFor='service'>Service title</label>
+              <label htmlFor='service'>Service Title</label>
               <input
                 type='text'
                 id='service'
@@ -54,7 +54,7 @@ const Add = () => {
               />
             </div>
             <div className='formGroup'>
-              <label htmlFor='short-desc'>Short description</label>
+              <label htmlFor='short-desc'>Short Description</label>
               <textarea
                 type='text'
                 id='short-desc'
@@ -65,15 +65,15 @@ const Add = () => {
               />
             </div>
             <div className='formGroup'>
-              <label htmlFor='delivery-time'>Delivery time(e.g. 3 days)</label>
+              <label htmlFor='delivery-time'>Delivery Time(e.g. 3 days)</label>
               <input type='number' id='delivery-time' min={1} />
             </div>
             <div className='formGroup'>
-              <label htmlFor='revision'>Revision number</label>
+              <label htmlFor='revision'>Revision Number</label>
               <input type='text' id='revision' placeholder='' />
             </div>
             <div className='formGroup'>
-              <label htmlFor='features'>Add features</label>
+              <label htmlFor='features'>Add Features</label>
               <input type='text' placeholder='e.g. page design' />
               <input type='text' placeholder='e.g. file uploading' />
               <input type='text' placeholder='e.g. setting up a domain' />

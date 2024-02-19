@@ -15,12 +15,13 @@
 
     .sections {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: 10rem;
 
       .left,
       .right {
+        flex: 1;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -43,6 +44,14 @@
           display: inline-block;
           font-size: 1.8rem;
           color: gray;
+        }
+
+        input,
+        select,
+        textarea {
+          display: inline-block;
+          font-family: inherit;
+          padding: 2rem;
         }
       }
     }
