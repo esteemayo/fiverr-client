@@ -6,6 +6,15 @@
   .container {
     width: 120rem;
 
+    .slider {
+      .carousel-row {
+        img {
+          max-height: 50rem;
+          object-fit: contain;
+        }
+      }
+    }
+
     .carousel-prev,
     .carousel-next {
       width: 5rem;

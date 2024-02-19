@@ -30,9 +30,11 @@
   }
 
   .slider {
-    img {
-      max-height: 50rem;
-      object-fit: contain;
+    .carousel-row {
+      img {
+        max-height: 50rem;
+        object-fit: contain;
+      }
     }
   }
 
