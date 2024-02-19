@@ -60,7 +60,21 @@
         textarea {
           display: inline-block;
           font-family: inherit;
+          outline: none;
           padding: 2rem;
+          background-color: transparent;
+          color: #999;
+          border: 1px solid rgb(224, 224, 224);
+          border-radius: 0.5rem;
+          caret-color: var(--clr-secondary-green);
+        }
+
+        input[type='file'] {
+          border: none;
+        }
+
+        textarea {
+          resize: none;
         }
       }
     }
