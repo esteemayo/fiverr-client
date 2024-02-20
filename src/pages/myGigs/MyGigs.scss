@@ -54,7 +54,7 @@
         }
 
         &:nth-child(even) {
-          background-color: #1dbf730f;
+          background-color: var(--clr-tertiary-green);
         }
       }
     }
