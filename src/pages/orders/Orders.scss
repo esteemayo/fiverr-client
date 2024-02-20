@@ -53,7 +53,7 @@
         }
 
         &:nth-child(2n) {
-          background-color: #1dbf730f;
+          background-color: var(--clr-tertiary-green);
         }
       }
     }
