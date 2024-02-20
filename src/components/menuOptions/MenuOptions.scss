@@ -1,0 +1,19 @@
+.options {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 20rem;
+  font-weight: 300;
+  padding: 2rem;
+  background-color: var(--clr-white);
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  display: none;
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
