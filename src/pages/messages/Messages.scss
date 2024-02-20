@@ -23,7 +23,7 @@
         height: 10rem;
 
         &.active {
-          background-color: #1dbf730f;
+          background-color: var(--clr-tertiary-green);
         }
 
         th {
