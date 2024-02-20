@@ -17,12 +17,9 @@
     gap: 1rem;
   }
 
-  a {
-    &:link,
-    &:active {
-      padding: 0.5rem 1rem;
-      transition: all 0.3s ease;
-    }
+  & > * {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: rgb(252, 251, 251);
