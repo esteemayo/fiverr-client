@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import Menu from '../menu/Menu';
+import MenuOptions from '../menuOptions/MenuOptions';
 
 import './Navbar.scss';
 
@@ -57,17 +58,7 @@ const Navbar = () => {
                 alt='avatar'
               />
               <span>{currentUser.username}</span>
-              <div className={isOpen ? 'options show' : 'options'}>
-                {currentUser.isSeller && (
-                  <>
-                    <Link to='/mygigs'>Gigs</Link>
-                    <Link to='/add'>Add New Gig</Link>
-                  </>
-                )}
-                <Link to='/orders'>Orders</Link>
-                <Link to='/messages'>Messages</Link>
-                <span>Logout</span>
-              </div>
+              <MenuOptions isOpen={isOpen} currentUser={currentUser} />
             </div>
           )}
         </div>

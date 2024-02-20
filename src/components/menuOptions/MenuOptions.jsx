@@ -4,7 +4,7 @@ import './MenuOptions.scss';
 
 const MenuOptions = ({ isOpen, currentUser }) => {
   return (
-    <aside className={isOpen ? 'options show' : 'options'}>
+    <div className={isOpen ? 'options show' : 'options'}>
       {currentUser.isSeller && (
         <>
           <Link to='/mygigs'>Gigs</Link>
@@ -14,7 +14,7 @@ const MenuOptions = ({ isOpen, currentUser }) => {
       <Link to='/orders'>Orders</Link>
       <Link to='/messages'>Messages</Link>
       <span>Logout</span>
-    </aside>
+    </div>
   );
 };
 
