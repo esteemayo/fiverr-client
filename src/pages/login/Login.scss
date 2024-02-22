@@ -19,6 +19,13 @@
         color: gray;
         margin-bottom: 3rem;
       }
+
+      .formGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
     }
   }
 }
