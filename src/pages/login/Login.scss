@@ -6,65 +6,72 @@
     width: 120rem;
     padding: 5rem 0;
 
-    form {
+    .wrapper {
+      width: 100%;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
 
-      h1 {
-        text-transform: capitalize;
-        font-weight: 300;
-        color: gray;
-        margin-bottom: 3rem;
-      }
-
-      .formGroup {
+      form {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
 
-        label {
-          width: 2rem;
-          display: inline-block;
-          font-size: 1.8rem;
+        h1 {
+          text-transform: capitalize;
+          font-weight: 300;
           color: gray;
+          margin-bottom: 3rem;
         }
 
-        input {
-          display: inline-block;
-          font-family: inherit;
-          outline: none;
-          font-size: var(--default-font-size);
-          padding: 2rem;
-          background-color: transparent;
-          color: #999;
-          border: 1px solid rgb(224, 224, 224);
-          border-radius: 0.5rem;
-          caret-color: var(--clr-primary-green);
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 0.5rem;
 
-          &::placeholder {
-            font-size: 1.5rem;
-            color: #ccc;
+          label {
+            width: 2rem;
+            display: inline-block;
+            font-size: 1.8rem;
+            color: gray;
+          }
+
+          input {
+            display: inline-block;
+            font-family: inherit;
+            outline: none;
+            font-size: var(--default-font-size);
+            padding: 2rem;
+            background-color: transparent;
+            color: #999;
+            border: 1px solid rgb(224, 224, 224);
+            border-radius: 0.5rem;
+            caret-color: var(--clr-primary-green);
+
+            &::placeholder {
+              font-size: 1.5rem;
+              color: #ccc;
+            }
           }
         }
-      }
 
-      button {
-        display: inline-block;
-        border: none;
-        outline: none;
-        text-transform: capitalize;
-        font-weight: 500;
-        font-size: 1.8rem;
-        width: 100%;
-        padding: 2rem;
-        background-color: var(--clr-primary-green);
-        color: var(--clr-white);
-        border-radius: 0.5rem;
-        cursor: pointer;
+        button {
+          display: inline-block;
+          border: none;
+          outline: none;
+          text-transform: capitalize;
+          font-weight: 500;
+          font-size: 1.8rem;
+          width: 100%;
+          padding: 2rem;
+          background-color: var(--clr-primary-green);
+          color: var(--clr-white);
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
       }
     }
   }
