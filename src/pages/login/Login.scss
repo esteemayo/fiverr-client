@@ -25,6 +25,12 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 0.5rem;
+
+        label {
+          display: inline-block;
+          font-size: 1.8rem;
+          color: gray;
+        }
       }
     }
   }
