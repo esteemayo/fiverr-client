@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { login } from '../../services/authService';
-import { setToStorage, tokenKey } from '../../utils';
+import { setToStorage, userKey } from '../../utils';
 
 import './Login.scss';
 
@@ -28,7 +28,7 @@ const Login = () => {
 
       try {
         const res = await login({ ...data });
-        setToStorage(tokenKey, res.data.details);
+        setToStorage(userKey, res.data.details);
         navigate('/');
       } catch (err) {
         setError(err.response.data.message);
