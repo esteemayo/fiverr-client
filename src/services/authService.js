@@ -7,3 +7,5 @@ export const login = (credentials) =>
 
 export const register = (credentials) =>
   http.post(`${apiEndpoint}/register`, credentials);
+
+export const logout = () => http.post(`${apiEndpoint}/logout`);
