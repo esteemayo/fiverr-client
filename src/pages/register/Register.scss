@@ -5,5 +5,23 @@
   .container {
     width: 120rem;
     padding: 5rem 0;
+
+    form {
+      .left {
+        h1 {
+          font-weight: 300;
+          color: gray;
+          margin-bottom: 3rem;
+        }
+      }
+
+      .right {
+        h1 {
+          font-weight: 300;
+          color: gray;
+          margin-bottom: 3rem;
+        }
+      }
+    }
   }
 }
