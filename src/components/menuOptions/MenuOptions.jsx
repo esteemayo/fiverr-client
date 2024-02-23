@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import './MenuOptions.scss';
 
-const MenuOptions = ({ isOpen, currentUser }) => {
+const MenuOptions = ({ isOpen, currentUser, onClick }) => {
   return (
     <div className={isOpen ? 'options show' : 'options'}>
       {currentUser.isSeller && (
@@ -13,7 +13,7 @@ const MenuOptions = ({ isOpen, currentUser }) => {
       )}
       <Link to='/orders'>Orders</Link>
       <Link to='/messages'>Messages</Link>
-      <span>Logout</span>
+      <span onClick={onClick}>Logout</span>
     </div>
   );
 };

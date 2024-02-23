@@ -66,7 +66,11 @@ const Navbar = () => {
             <div className='user' onClick={handleToggle}>
               <img src={currentUser.img ?? '/img/noavatar.jpg'} alt='avatar' />
               <span>{currentUser.username}</span>
-              <MenuOptions isOpen={isOpen} currentUser={currentUser} />
+              <MenuOptions
+                isOpen={isOpen}
+                currentUser={currentUser}
+                onClick={handleLogout}
+              />
             </div>
           )}
         </div>
