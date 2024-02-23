@@ -3,10 +3,13 @@
   justify-content: center;
 
   .container {
-    width: 120rem;
     padding: 5rem 0;
 
     form {
+      display: flex;
+      justify-content: space-between;
+      gap: 10rem;
+
       .left {
         h1 {
           font-weight: 300;
