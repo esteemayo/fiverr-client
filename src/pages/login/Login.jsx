@@ -19,7 +19,9 @@ const Login = () => {
 
   const handleChange = useCallback(({ target: input }) => {
     const { name, value } = input;
-    setData((prev) => ({ ...prev, [name]: value }));
+    setData((prev) => {
+      return { ...prev, [name]: value };
+    });
   }, []);
 
   const handleSubmit = useCallback(
