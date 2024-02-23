@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import { login } from '../../services/authService';
+import { setToStorage, tokenKey } from '../../utils';
 
 import './Login.scss';
 
@@ -23,6 +24,7 @@ const Login = () => {
 
     try {
       const res = await login({ ...data });
+      setToStorage(tokenKey, res.details);
     } catch (err) {
       setError(err.response.data.message);
       console.log(err.response.data.message);
