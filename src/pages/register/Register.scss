@@ -10,7 +10,15 @@
       justify-content: space-between;
       gap: 10rem;
 
-      .left {
+      .left,
+      .right {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+
         h1 {
           font-weight: 300;
           color: gray;
@@ -18,12 +26,10 @@
         }
       }
 
+      .left {
+      }
+
       .right {
-        h1 {
-          font-weight: 300;
-          color: gray;
-          margin-bottom: 3rem;
-        }
       }
     }
   }
