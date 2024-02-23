@@ -55,7 +55,7 @@ const Register = () => {
           </div>
           <div className='right'>
             <h1>I want to become a seller</h1>
-            <div className='formGroup'>
+            <div className='radio'>
               <label htmlFor='isSeller'>Activate the seller account</label>
               <input type='radio' id='isSeller' />
             </div>
