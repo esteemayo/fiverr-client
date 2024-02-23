@@ -12,6 +12,7 @@ const authFetch = Axios.create({
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },
+  withCredentials: true,
 });
 
 authFetch.interceptors.response.use(null, (error) => {
