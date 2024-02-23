@@ -19,14 +19,17 @@ const Register = () => {
 
   const handleChange = useCallback(({ target: input }) => {
     const { name, value } = input;
+
     setData((prev) => {
       return { ...prev, [name]: value };
     });
   }, []);
 
-  const handleSeller = useCallback(() => {
+  const handleSeller = useCallback(({ target: input }) => {
+    const { checked } = input;
+
     setData((prev) => {
-      return { ...prev, isSeller: !prev.isSeller };
+      return { ...prev, isSeller: checked };
     });
   }, []);
 
