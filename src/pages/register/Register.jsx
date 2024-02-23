@@ -14,12 +14,19 @@ const initialState = {
 };
 
 const Register = () => {
+  const [file, setFile] = useState(null);
   const [data, setData] = useState(initialState);
 
   const handleChange = useCallback(({ target: input }) => {
     const { name, value } = input;
     setData((prev) => {
       return { ...prev, [name]: value };
+    });
+  }, []);
+
+  const handleSeller = useCallback(() => {
+    setData((prev) => {
+      return { ...prev, isSeller: !prev.isSeller };
     });
   }, []);
 
@@ -75,7 +82,12 @@ const Register = () => {
             </div>
             <div className='formGroup'>
               <label htmlFor='file'>Profile Picture</label>
-              <input type='file' id='file' accept='image/*' />
+              <input
+                type='file'
+                id='file'
+                accept='image/*'
+                onChange={(e) => setFile(e.target.files[0])}
+              />
             </div>
             <div className='formGroup'>
               <label htmlFor='country'>Country</label>
@@ -94,7 +106,7 @@ const Register = () => {
             <div className='toggle'>
               <label htmlFor='isSeller'>Activate the seller account</label>
               <label htmlFor='' className='switch'>
-                <input type='checkbox' id='isSeller' />
+                <input type='checkbox' id='isSeller' onChange={handleSeller} />
                 <span className='slider round' />
               </label>
             </div>
