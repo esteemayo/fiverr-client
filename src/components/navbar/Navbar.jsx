@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import Menu from '../menu/Menu';
 import MenuOptions from '../menuOptions/MenuOptions';
 
+import { userKey, getFromStorage } from '../../utils';
+
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -29,11 +31,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, [isActiveHandler]);
 
-  const currentUser = {
-    id: 1,
-    username: 'John Doe',
-    isSeller: true,
-  };
+  const currentUser = getFromStorage(userKey);
 
   return (
     <nav className={navClasses}>
@@ -53,10 +51,7 @@ const Navbar = () => {
           {!currentUser && <button>Join</button>}
           {!!currentUser && (
             <div className='user' onClick={handleToggle}>
-              <img
-                src='https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600'
-                alt='avatar'
-              />
+              <img src={currentUser.img ?? '/img/noavatar.jpg'} alt='avatar' />
               <span>{currentUser.username}</span>
               <MenuOptions isOpen={isOpen} currentUser={currentUser} />
             </div>
