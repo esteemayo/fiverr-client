@@ -76,6 +76,13 @@
       }
 
       .right {
+        .formGroup {
+          gap: 4rem;
+
+          textarea {
+            resize: none;
+          }
+        }
       }
     }
   }
