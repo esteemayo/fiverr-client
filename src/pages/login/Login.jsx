@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { login } from '../../services/authService';
 import { setToStorage, tokenKey } from '../../utils';
@@ -11,6 +12,8 @@ const initialState = {
 };
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [error, setError] = useState(null);
   const [data, setData] = useState(initialState);
 
@@ -19,17 +22,21 @@ const Login = () => {
     setData((prev) => ({ ...prev, [name]: value }));
   }, []);
 
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
 
-    try {
-      const res = await login({ ...data });
-      setToStorage(tokenKey, res.details);
-    } catch (err) {
-      setError(err.response.data.message);
-      console.log(err.response.data.message);
-    }
-  }, []);
+      try {
+        const res = await login({ ...data });
+        setToStorage(tokenKey, res.data.details);
+        navigate('/');
+      } catch (err) {
+        setError(err.response.data.message);
+        console.log(err.response.data.message);
+      }
+    },
+    [data, navigate, setToStorage]
+  );
 
   const { username, password } = data;
 
