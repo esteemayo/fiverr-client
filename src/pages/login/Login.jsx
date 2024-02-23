@@ -8,8 +8,8 @@ const initialState = {
 };
 
 const Login = () => {
-  const [data, setData] = useState(initialState);
   const [error, setError] = useState(null);
+  const [data, setData] = useState(initialState);
 
   const handleChange = useCallback(({ target: input }) => {
     const { name, value } = input;
