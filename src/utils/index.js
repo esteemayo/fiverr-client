@@ -1,4 +1,4 @@
-export const tokenKey = 'accessToken';
+export const tokenKey = 'currentUser';
 
 export const excerpts = (str, count) => {
   if (str.length > count) {
