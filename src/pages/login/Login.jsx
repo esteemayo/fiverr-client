@@ -38,8 +38,6 @@ const Login = () => {
     [data, navigate, setToStorage]
   );
 
-  const { username, password } = data;
-
   return (
     <main className='login'>
       <div className='container'>
@@ -52,7 +50,6 @@ const Login = () => {
                 type='text'
                 id='username'
                 name='username'
-                value={username}
                 placeholder='johndoe'
                 onChange={handleChange}
               />
@@ -63,7 +60,6 @@ const Login = () => {
                 type='password'
                 id='password'
                 name='password'
-                value={password}
                 placeholder='********'
                 onChange={handleChange}
               />
