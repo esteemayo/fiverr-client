@@ -1,5 +1,7 @@
 import { useCallback, useState } from 'react';
 
+import { login } from '../../services/authService';
+
 import './Login.scss';
 
 const initialState = {
@@ -16,9 +18,18 @@ const Login = () => {
     setData((prev) => ({ ...prev, [name]: value }));
   }, []);
 
-  const handleSubmit = useCallback((e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
+
+    try {
+      const res = await login({ ...data });
+    } catch (err) {
+      setError(err.response.data.message);
+      console.log(err.response.data.message);
+    }
   }, []);
+
+  const { username, password } = data;
 
   return (
     <main className='login'>
@@ -31,6 +42,8 @@ const Login = () => {
               <input
                 type='text'
                 id='username'
+                name='username'
+                value={username}
                 placeholder='johndoe'
                 onChange={handleChange}
               />
@@ -40,11 +53,14 @@ const Login = () => {
               <input
                 type='password'
                 id='password'
-                placeholder='johndoe@gmail.com'
+                name='password'
+                value={password}
+                placeholder='********'
                 onChange={handleChange}
               />
             </div>
             <button type='submit'>Login</button>
+            <span>{error && error}</span>
           </form>
         </div>
       </div>
