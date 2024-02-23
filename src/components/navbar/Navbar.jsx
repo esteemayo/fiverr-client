@@ -60,7 +60,7 @@ const Navbar = () => {
           <span>Explore</span>
           <span>English</span>
           <Link to='/login'>Sign in</Link>
-          {!currentUser.isSeller && <span>Become a Seller</span>}
+          {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button>Join</button>}
           {!!currentUser && (
             <div className='user' onClick={handleToggle}>
