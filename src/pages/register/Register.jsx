@@ -30,7 +30,7 @@ const Register = () => {
               />
             </div>
             <div className='formGroup'>
-              <label htmlFor='confirmPassword'>Confirm password</label>
+              <label htmlFor='confirmPassword'>Confirm Password</label>
               <input
                 type='password'
                 id='confirmPassword'
@@ -39,11 +39,11 @@ const Register = () => {
               />
             </div>
             <div className='formGroup'>
-              <label htmlFor='file'>Profile picture</label>
+              <label htmlFor='file'>Profile Picture</label>
               <input type='file' id='file' accept='image/*' />
             </div>
             <div className='formGroup'>
-              <label htmlFor='country'>country</label>
+              <label htmlFor='country'>Country</label>
               <input
                 type='text'
                 id='country'
@@ -60,7 +60,7 @@ const Register = () => {
               <input type='radio' id='isSeller' />
             </div>
             <div className='formGroup'>
-              <label htmlFor='phone'>Phone number</label>
+              <label htmlFor='phone'>Phone Number</label>
               <input
                 type='phone'
                 id='phone'
