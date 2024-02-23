@@ -1,14 +1,16 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import Menu from '../menu/Menu';
 import MenuOptions from '../menuOptions/MenuOptions';
 
-import { userKey, getFromStorage } from '../../utils';
+import { logout } from '../../services/authService';
+import { userKey, getFromStorage, removeFromStorage } from '../../utils';
 
 import './Navbar.scss';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +23,17 @@ const Navbar = () => {
   const isActiveHandler = useCallback(() => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
+
+  const handleLogout = useCallback(async () => {
+    try {
+      await logout();
+
+      removeFromStorage(userKey);
+      navigate('/');
+    } catch (err) {
+      console.log(err);
+    }
+  }, [navigate]);
 
   const navClasses = useMemo(() => {
     return isActive || pathname !== '/' ? 'navbar active' : 'navbar';
