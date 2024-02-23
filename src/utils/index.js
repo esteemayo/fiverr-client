@@ -8,7 +8,7 @@ export const excerpts = (str, count) => {
 };
 
 export const getFromStorage = (key) => {
-  return localStorage.getItem(key);
+  return JSON.parse(localStorage.getItem(key));
 };
 
 export const setToStorage = (key, value) => {
