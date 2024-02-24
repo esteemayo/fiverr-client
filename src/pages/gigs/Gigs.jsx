@@ -16,10 +16,14 @@ const Gigs = () => {
   const [sort, setSort] = useState('sales');
   const [isOpen, setIsOpen] = useState(false);
 
-  const { isLoading, error, data } = useQuery({
+  const { isLoading, error, data, refetch } = useQuery({
     queryKey: ['gigs'],
     queryFn: async () => {
-      const { data } = await getGigs(search);
+      const { data } = await getGigs(
+        search,
+        minRef.current?.value,
+        maxRef.current?.value
+      );
       return data;
     },
   });
@@ -32,6 +36,10 @@ const Gigs = () => {
     setSort(type);
     setIsOpen(false);
   }, []);
+
+  const handleFilter = useCallback(() => {
+    refetch();
+  }, [refetch]);
 
   const sortLabel = useMemo(() => {
     return sort === 'sales' ? 'Best Selling' : 'Newest';
@@ -49,9 +57,9 @@ const Gigs = () => {
         <div className='menu'>
           <div className='left'>
             <span>Budget</span>
-            <input type='text' placeholder='min' />
-            <input type='text' placeholder='max' />
-            <button>Apply</button>
+            <input type='number' ref={minRef} placeholder='min' />
+            <input type='number' ref={maxRef} placeholder='max' />
+            <button onClick={handleFilter}>Apply</button>
           </div>
           <div className='right'>
             <span className='sortBy'>SortBy</span>
