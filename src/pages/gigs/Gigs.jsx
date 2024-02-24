@@ -1,6 +1,7 @@
+import { useQuery } from '@tanstack/react-query';
 import { useCallback, useMemo, useState } from 'react';
 
-import { gigs } from '../../data';
+import { getGigs } from '../../services/gigService';
 import GigCard from '../../components/gigCard/GigCard';
 
 import './Gigs.scss';
@@ -8,6 +9,14 @@ import './Gigs.scss';
 const Gigs = () => {
   const [sort, setSort] = useState('sales');
   const [isOpen, setIsOpen] = useState(false);
+
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['gigs'],
+    queryFn: async () => {
+      const { data } = await getGigs();
+      return data;
+    },
+  });
 
   const handleToggle = useCallback(() => {
     setIsOpen((value) => !value);
@@ -54,9 +63,13 @@ const Gigs = () => {
           </div>
         </div>
         <div className='cards'>
-          {gigs.map((item) => {
-            return <GigCard key={item.id} {...item} />;
-          })}
+          {isLoading
+            ? 'loading'
+            : error
+            ? 'Something went wrong'
+            : data.map((item) => {
+                return <GigCard key={item.id} {...item} />;
+              })}
         </div>
       </div>
     </main>
