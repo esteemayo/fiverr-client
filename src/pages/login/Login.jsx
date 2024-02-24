@@ -30,6 +30,7 @@ const Login = () => {
 
       try {
         const res = await login({ ...data });
+
         setToStorage(userKey, res.data.details);
         navigate('/');
       } catch (err) {
