@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { useCallback, useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useCallback, useMemo, useRef, useState } from 'react';
 
 import { getGigs } from '../../services/gigService';
 import GigCard from '../../components/gigCard/GigCard';
@@ -7,13 +8,18 @@ import GigCard from '../../components/gigCard/GigCard';
 import './Gigs.scss';
 
 const Gigs = () => {
+  const { search } = useLocation();
+
+  const minRef = useRef();
+  const maxRef = useRef();
+
   const [sort, setSort] = useState('sales');
   const [isOpen, setIsOpen] = useState(false);
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['gigs'],
     queryFn: async () => {
-      const { data } = await getGigs();
+      const { data } = await getGigs(search);
       return data;
     },
   });
