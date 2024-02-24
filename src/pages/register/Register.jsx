@@ -45,12 +45,15 @@ const Register = () => {
     async (e) => {
       e.preventDefault();
 
+      const credentials = {
+        ...data,
+      };
+
       try {
-        const url = await upload(file);
-        const credentials = {
-          ...data,
-          img: url,
-        };
+        if (file) {
+          const url = await upload(file);
+          credentials.img = url;
+        }
 
         const res = await register({ ...credentials });
 
