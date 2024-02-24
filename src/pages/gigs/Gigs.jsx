@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { getGigs } from '../../services/gigService';
 import GigCard from '../../components/gigCard/GigCard';
@@ -22,7 +22,8 @@ const Gigs = () => {
       const { data } = await getGigs(
         search,
         minRef.current?.value,
-        maxRef.current?.value
+        maxRef.current?.value,
+        sort
       );
       return data;
     },
@@ -43,6 +44,10 @@ const Gigs = () => {
 
   const sortLabel = useMemo(() => {
     return sort === 'sales' ? 'Best Selling' : 'Newest';
+  }, [sort]);
+
+  useEffect(() => {
+    refetch();
   }, [sort]);
 
   return (
