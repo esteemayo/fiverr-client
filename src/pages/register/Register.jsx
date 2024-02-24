@@ -1,4 +1,10 @@
 import { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { upload } from '../../utils/upload';
+import { setToStorage, userKey } from '../../utils';
+
+import { register } from '../../services/authService';
 
 import './Register.scss';
 
@@ -14,6 +20,8 @@ const initialState = {
 };
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const [file, setFile] = useState(null);
   const [data, setData] = useState(initialState);
 
@@ -33,9 +41,27 @@ const Register = () => {
     });
   }, []);
 
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-  }, []);
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
+
+      try {
+        const url = await upload(file);
+        const credentials = {
+          ...data,
+          img: url,
+        };
+
+        const res = await register({ ...credentials });
+
+        setToStorage(userKey, res.data.details);
+        navigate('/');
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    [data, file, navigate, setToStorage]
+  );
 
   return (
     <main className='register'>
