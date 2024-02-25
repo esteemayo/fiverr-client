@@ -2,7 +2,7 @@ import Star from '../star/Star';
 
 import './Seller.scss';
 
-const Seller = () => {
+const Seller = ({ starNumber, totalStars }) => {
   return (
     <section className='seller'>
       <h2>About the seller</h2>
@@ -14,7 +14,7 @@ const Seller = () => {
         />
         <div className='info'>
           <span>John Doe</span>
-          <Star />
+          <Star starNumber={starNumber} totalStars={totalStars} />
           <button>Contact me</button>
         </div>
       </div>

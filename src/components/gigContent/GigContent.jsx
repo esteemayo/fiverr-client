@@ -5,7 +5,7 @@ import Reviews from '../reviews/Reviews';
 
 import './GigContent.scss';
 
-const GigContent = ({ desc, title, images }) => {
+const GigContent = ({ desc, title, images, starNumber, totalStars }) => {
   return (
     <section className='gigContent'>
       <span className='breadCrumbs'>FIVERR &gt; GRAPHICS & DESIGN &gt;</span>
@@ -17,7 +17,7 @@ const GigContent = ({ desc, title, images }) => {
           className='pp'
         />
         <span>John Doe</span>
-        <Star />
+        <Star starNumber={starNumber} totalStars={totalStars} />
       </div>
       <Slide arrowsScroll={1} slidesToShow={1} className='slider'>
         {images.map((img, index) => {
@@ -26,7 +26,7 @@ const GigContent = ({ desc, title, images }) => {
       </Slide>
       <h2>About this gig</h2>
       <p>{desc}</p>
-      <Seller />
+      <Seller starNumber={starNumber} totalStars={totalStars} />
       <Reviews />
     </section>
   );

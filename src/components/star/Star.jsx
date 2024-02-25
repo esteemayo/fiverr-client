@@ -1,15 +1,28 @@
+import { useMemo } from 'react';
+
 import './Star.scss';
 
-const Star = () => {
+const Star = ({ starNumber, totalStars }) => {
+  const stars = useMemo(() => {
+    return (
+      !isNaN(Math.round(totalStars / starNumber)) &&
+      Math.round(totalStars / starNumber)
+    );
+  }, [starNumber, totalStars]);
+
   return (
-    <div className='stars'>
-      <img src='/img/star.png' alt='star icon' />
-      <img src='/img/star.png' alt='star icon' />
-      <img src='/img/star.png' alt='star icon' />
-      <img src='/img/star.png' alt='star icon' />
-      <img src='/img/star.png' alt='star icon' />
-      <span>5</span>
-    </div>
+    <>
+      {!isNaN(Math.round(totalStars / starNumber)) && (
+        <div className='stars'>
+          {Array(Math.round(totalStars / starNumber))
+            .fill()
+            .map((_, index) => {
+              return <img key={index} src='/img/star.png' alt='star icon' />;
+            })}
+          <span>{stars}</span>
+        </div>
+      )}
+    </>
   );
 };
 
