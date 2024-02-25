@@ -14,6 +14,7 @@ const GigContent = ({
   user,
   title,
   images,
+  _id: id,
   starNumber,
   totalStars,
   createdAt,
@@ -60,7 +61,7 @@ const GigContent = ({
         user={data}
         createdAt={createdAt}
       />
-      <Reviews />
+      <Reviews gigId={id} />
     </section>
   );
 };
