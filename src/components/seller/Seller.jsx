@@ -1,8 +1,29 @@
+import { useMemo } from 'react';
+
 import Star from '../star/Star';
 
 import './Seller.scss';
 
-const Seller = ({ starNumber, totalStars, isLoading, error, user }) => {
+const Seller = ({
+  starNumber,
+  totalStars,
+  isLoading,
+  error,
+  user,
+  createdAt,
+}) => {
+  const dateJoined = useMemo(() => {
+    const now = new Date(createdAt);
+    const date = now.toLocaleDateString('en-us', {
+      month: 'long',
+      year: 'numeric',
+    });
+
+    const newDate = date.split(' ');
+
+    return `${newDate[0].slice(0, 3)} ${newDate[1]}`;
+  }, [createdAt]);
+
   return (
     <>
       {isLoading ? (
@@ -32,7 +53,7 @@ const Seller = ({ starNumber, totalStars, isLoading, error, user }) => {
               </div>
               <div className='item'>
                 <span className='title'>Member since</span>
-                <span className='desc'>Aug 2022</span>
+                <span className='desc'>{dateJoined}</span>
               </div>
               <div className='item'>
                 <span className='title'>Avg. response time</span>

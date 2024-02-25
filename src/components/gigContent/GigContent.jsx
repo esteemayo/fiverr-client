@@ -9,7 +9,15 @@ import { getUser } from '../../services/userService';
 
 import './GigContent.scss';
 
-const GigContent = ({ desc, user, title, images, starNumber, totalStars }) => {
+const GigContent = ({
+  desc,
+  user,
+  title,
+  images,
+  starNumber,
+  totalStars,
+  createdAt,
+}) => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['user'],
     queryFn: async () => {
@@ -50,6 +58,7 @@ const GigContent = ({ desc, user, title, images, starNumber, totalStars }) => {
         isLoading={isLoading}
         error={error}
         user={data}
+        createdAt={createdAt}
       />
       <Reviews />
     </section>
