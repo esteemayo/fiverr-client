@@ -1,32 +1,56 @@
+import { useQuery } from '@tanstack/react-query';
+
 import Star from '../star/Star';
 import Seller from '../seller/Seller';
 import Slide from '../slide/Slide';
 import Reviews from '../reviews/Reviews';
 
+import { getUser } from '../../services/userService';
+
 import './GigContent.scss';
 
-const GigContent = ({ desc, title, images, starNumber, totalStars }) => {
+const GigContent = ({ desc, user, title, images, starNumber, totalStars }) => {
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['user'],
+    queryFn: async () => {
+      const { data } = await getUser(user);
+      return data;
+    },
+  });
+
   return (
     <section className='gigContent'>
       <span className='breadCrumbs'>FIVERR &gt; GRAPHICS & DESIGN &gt;</span>
       <h1>{title}</h1>
-      <div className='user'>
-        <img
-          src='https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/23905bcdab16b427c8612965f318b4e0-1660400198734/8275baf4-be7e-4120-8a7a-ddf0fde94600.png'
-          alt='avatar'
-          className='pp'
-        />
-        <span>John Doe</span>
-        <Star starNumber={starNumber} totalStars={totalStars} />
-      </div>
-      <Slide arrowsScroll={1} slidesToShow={1} className='slider'>
+      {isLoading ? (
+        'loading'
+      ) : error ? (
+        'Something went wrong!'
+      ) : (
+        <div className='user'>
+          <img
+            src={data.image ?? '/img/noavatar.jpg'}
+            alt='avatar'
+            className='pp'
+          />
+          <span>{data.username}</span>
+          <Star starNumber={starNumber} totalStars={totalStars} />
+        </div>
+      )}
+      {/* <Slide arrowsScroll={1} slidesToShow={1} className='slider'>
         {images.map((img, index) => {
           return <img src={img} alt={`Image ${index + 1}`} />;
         })}
-      </Slide>
+      </Slide> */}
       <h2>About this gig</h2>
       <p>{desc}</p>
-      <Seller starNumber={starNumber} totalStars={totalStars} />
+      <Seller
+        starNumber={starNumber}
+        totalStars={totalStars}
+        isLoading={isLoading}
+        error={error}
+        user={data}
+      />
       <Reviews />
     </section>
   );
