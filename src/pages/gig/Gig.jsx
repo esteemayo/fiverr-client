@@ -7,7 +7,6 @@ import GigContent from '../../components/gigContent/GigContent';
 import { getGig } from '../../services/gigService';
 
 import './Gig.scss';
-import { getUser } from '../../services/userService';
 
 const Gig = () => {
   const { id } = useParams();
