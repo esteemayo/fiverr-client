@@ -1,4 +1,4 @@
-import ReviewItem from '../reviewItem/ReviewItem';
+import Review from '../review/Review';
 
 import './Reviews.scss';
 
@@ -6,9 +6,9 @@ const Reviews = () => {
   return (
     <section className='reviews'>
       <h2>Reviews</h2>
-      <ReviewItem />
-      <ReviewItem />
-      <ReviewItem />
+      <Review />
+      <Review />
+      <Review />
     </section>
   );
 };
