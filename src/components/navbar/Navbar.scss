@@ -13,6 +13,19 @@
   &.active {
     background-color: var(--clr-white);
     color: var(--clr-black);
+
+    .container {
+      .links {
+        button {
+          color: var(--clr-primary-green);
+          border-color: var(--clr-primary-green);
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
   }
 
   .container {
