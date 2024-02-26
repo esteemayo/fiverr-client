@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 
 import Review from '../review/Review';
+import AddReview from '../addReview/AddReview';
+
 import { getReviews } from '../../services/reviewService';
 
 import './Reviews.scss';
@@ -24,6 +26,7 @@ const Reviews = ({ gigId }) => {
         : data.map((review) => {
             return <Review key={review._id} {...review} />;
           })}
+      <AddReview />
     </section>
   );
 };
