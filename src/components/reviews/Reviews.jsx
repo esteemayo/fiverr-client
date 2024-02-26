@@ -26,7 +26,7 @@ const Reviews = ({ gigId }) => {
         : data.map((review) => {
             return <Review key={review._id} {...review} />;
           })}
-      <AddReview />
+      <AddReview gigId={gigId} />
     </section>
   );
 };
