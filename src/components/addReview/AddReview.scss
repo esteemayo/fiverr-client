@@ -1,2 +1,18 @@
 .addReview {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h3 {
+  }
+
+  form {
+    input,
+    select {
+    }
+
+    button {
+    }
+  }
 }
