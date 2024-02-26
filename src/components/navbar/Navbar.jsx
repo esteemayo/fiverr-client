@@ -5,7 +5,7 @@ import Menu from '../menu/Menu';
 import MenuOptions from '../menuOptions/MenuOptions';
 
 import { logout } from '../../services/authService';
-import { userKey, getFromStorage, removeFromStorage } from '../../utils';
+import { userKey, getFromStorage, setToStorage } from '../../utils';
 
 import './Navbar.scss';
 
@@ -28,7 +28,7 @@ const Navbar = () => {
     try {
       await logout();
 
-      removeFromStorage(userKey);
+      setToStorage(userKey, null);
       navigate('/');
     } catch (err) {
       console.log(err);
