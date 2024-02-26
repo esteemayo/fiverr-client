@@ -5,11 +5,11 @@ import Star from '../star/Star';
 import './Seller.scss';
 
 const Seller = ({
+  user,
+  error,
   starNumber,
   totalStars,
   isLoading,
-  error,
-  user,
   createdAt,
 }) => {
   const dateJoined = useMemo(() => {
