@@ -1,86 +1,71 @@
 import { Link } from 'react-router-dom';
+import moment from 'moment';
+import { useQuery } from '@tanstack/react-query';
+import { useMemo } from 'react';
 
-import { excerpts } from '../../utils';
+import { excerpts, getFromStorage, userKey } from '../../utils';
+import { getConversations } from '../../services/conversationService';
 
 import './Messages.scss';
 
 const Messages = () => {
-  const message = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium et nulla temporibus saepe sint eos tempore fuga labore, porro est nostrum harum, animi sed, voluptatem placeat adipisci corrupti dignissimos.`;
+  const currentUser = getFromStorage(userKey);
+
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['conversations'],
+    queryFn: async () => {
+      const { data } = await getConversations();
+      return data;
+    },
+  });
+
+  const statusLabel = useMemo(() => {
+    return currentUser.isSeller ? 'Buyer' : 'Seller';
+  }, [currentUser]);
 
   return (
     <main className='messages'>
-      <div className='container'>
-        <div className='title'>
-          <h1>Messages</h1>
+      {isLoading ? (
+        'loading'
+      ) : error ? (
+        'Something went wrong!'
+      ) : (
+        <div className='container'>
+          <div className='title'>
+            <h1>Messages</h1>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>{statusLabel}</th>
+                <th>Last message</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((conversation) => {
+                const { id, sellerId, buyerId, lastMessage, updatedAt } =
+                  conversation;
+                return (
+                  <tr key={id} className='active'>
+                    <td>{currentUser.isSeller ? buyerId : sellerId}</td>
+                    <td>
+                      <Link to={`/message/123`}>
+                        {lastMessage && excerpts(lastMessage, 100)}
+                      </Link>
+                    </td>
+                    <td>{moment(updatedAt).fromNow()}</td>
+                    <td>
+                      <button>Mark as Read</button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Buyer</th>
-              <th>Last message</th>
-              <th>Date</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className='active'>
-              <td>John Doe</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
-            </tr>
-            <tr className='active'>
-              <td>Mary Doe</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-              <td>
-                <button>Mark as Read</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Alice Doe</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-            </tr>
-            <tr>
-              <td>Christian Vega</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-            </tr>
-            <tr>
-              <td>Lourdes Browning</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-            </tr>
-            <tr>
-              <td>Katie Powell</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-            </tr>
-            <tr>
-              <td>Harry Rodriques</td>
-              <td>
-                <Link to={`/message/123`}>{excerpts(message, 100)}</Link>
-              </td>
-              <td>1 day ago</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      )}
     </main>
   );
 };
