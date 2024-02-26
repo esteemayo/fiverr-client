@@ -54,11 +54,11 @@ const GigContent = ({
       <h2>About this gig</h2>
       <p>{desc}</p>
       <Seller
+        user={data}
+        error={error}
         starNumber={starNumber}
         totalStars={totalStars}
         isLoading={isLoading}
-        error={error}
-        user={data}
         createdAt={createdAt}
       />
       <Reviews gigId={id} />
