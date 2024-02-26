@@ -1,4 +1,5 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import { createReview } from '../../services/reviewService';
@@ -8,7 +9,7 @@ import './AddReview.scss';
 const AddReview = ({ gigId }) => {
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation({
+  const { mutate, error } = useMutation({
     mutationFn: async (review) => {
       const { data } = await createReview(review);
       return data;
@@ -37,6 +38,10 @@ const AddReview = ({ gigId }) => {
     },
     [mutate]
   );
+
+  useEffect(() => {
+    error && toast.error(error?.response?.data.message);
+  }, [error]);
 
   return (
     <div className='addReview'>
