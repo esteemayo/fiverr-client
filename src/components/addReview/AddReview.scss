@@ -7,8 +7,28 @@
   h3 {
   }
 
-  form {
-    input,
+  .addForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    input {
+      display: inline-block;
+      outline: none;
+      font-family: inherit;
+      padding: 2rem;
+      background-color: transparent;
+      color: #999;
+      border: 1px solid rgb(224, 224, 224);
+      border-radius: 3px;
+      caret-color: var(--clr-primary-green);
+
+      &::placeholder {
+        font-size: 1.5rem;
+        color: #ccc;
+      }
+    }
+
     select {
     }
 
