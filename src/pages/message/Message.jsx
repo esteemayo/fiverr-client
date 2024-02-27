@@ -70,10 +70,10 @@ const Message = () => {
             {data.map((message) => {
               const { _id: id, desc, user } = message;
               return (
-                <div key={id} className={messageClasses(user)}>
+                <div key={id} className={messageClasses(user._id)}>
                   <img
-                    src='https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/168679800/original/51e1dc11dcae4c2c8b3f6c42e0fbf1d355558625/design-a-stunning-ui-and-build-a-fullstack-flutter-app.jpg'
-                    alt='avatar'
+                    src={user.image ?? '/img/noavatar.jpg'}
+                    alt={user.username}
                   />
                   <p>{desc}</p>
                 </div>
