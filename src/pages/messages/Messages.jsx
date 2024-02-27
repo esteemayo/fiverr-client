@@ -85,7 +85,7 @@ const Messages = () => {
                   >
                     <td>{currentUser.isSeller ? buyerId : sellerId}</td>
                     <td>
-                      <Link to={`/message/123`}>
+                      <Link to={`/message/${id}`}>
                         {lastMessage && lastMessage.substring(0, 100)}...
                       </Link>
                     </td>
