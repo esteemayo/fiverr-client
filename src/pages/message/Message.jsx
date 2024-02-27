@@ -83,13 +83,7 @@ const Message = () => {
         )}
         <hr />
         <form className='write' onSubmit={handleSubmit}>
-          <textarea
-            name=''
-            id=''
-            placeholder='write a message'
-            cols='30'
-            rows='10'
-          />
+          <textarea cols='30' rows='10' placeholder='write a message' />
           <button type='submit'>Send</button>
         </form>
       </div>
