@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom';
+import { useCallback, useMemo } from 'react';
 import moment from 'moment';
-import { useQuery } from '@tanstack/react-query';
-import { useMemo } from 'react';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 
-import { excerpts, getFromStorage, userKey } from '../../utils';
-import { getConversations } from '../../services/conversationService';
+import { getFromStorage, userKey } from '../../utils';
+import {
+  getConversations,
+  updateConversation,
+} from '../../services/conversationService';
 
 import './Messages.scss';
 
 const Messages = () => {
+  const queryClient = useQueryClient();
   const currentUser = getFromStorage(userKey);
 
   const { isLoading, error, data } = useQuery({
@@ -18,6 +22,23 @@ const Messages = () => {
       return data;
     },
   });
+
+  const { mutate } = useMutation({
+    mutationFn: async (conversationId) => {
+      const { data } = await updateConversation(conversationId);
+      return data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['conversations'] });
+    },
+  });
+
+  const handleRead = useCallback(
+    (conversationId) => {
+      mutate(conversationId);
+    },
+    [mutate]
+  );
 
   const statusLabel = useMemo(() => {
     return currentUser.isSeller ? 'Buyer' : 'Seller';
@@ -65,14 +86,16 @@ const Messages = () => {
                     <td>{currentUser.isSeller ? buyerId : sellerId}</td>
                     <td>
                       <Link to={`/message/123`}>
-                        {lastMessage && excerpts(lastMessage, 100)}
+                        {lastMessage && lastMessage.substring(0, 100)}...
                       </Link>
                     </td>
                     <td>{moment(updatedAt).fromNow()}</td>
                     <td>
                       {(currentUser.isSeller && !readBySeller) ||
                         (!currentUser.isSeller && !readByBuyer && (
-                          <button>Mark as Read</button>
+                          <button onClick={() => handleRead(id)}>
+                            Mark as Read
+                          </button>
                         ))}
                     </td>
                   </tr>
