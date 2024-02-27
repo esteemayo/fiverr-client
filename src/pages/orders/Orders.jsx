@@ -1,11 +1,22 @@
+import { useNavigate } from 'react-router-dom';
+import { useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
-import { formatCurrency } from '../../utils/formatCurrency';
 import { getUserOrders } from '../../services/orderService';
+import {
+  createConversation,
+  getConversation,
+} from '../../services/conversationService';
+
+import { getFromStorage, userKey } from '../../utils';
+import { formatCurrency } from '../../utils/formatCurrency';
 
 import './Orders.scss';
 
 const Orders = () => {
+  const navigate = useNavigate();
+  const currentUser = getFromStorage(userKey);
+
   const { isLoading, error, data } = useQuery({
     queryKey: ['orders'],
     queryFn: async () => {
@@ -13,6 +24,29 @@ const Orders = () => {
       return data;
     },
   });
+
+  const handleContact = useCallback(
+    async (order) => {
+      const { sellerId, buyerId } = order;
+      const conversationId = sellerId + buyerId;
+
+      try {
+        const { data } = await getConversation(conversationId);
+        navigate(`/message/${data.id}`);
+      } catch (err) {
+        console.log(err);
+        if (err.response.status == 404) {
+          const conversation = {
+            to: currentUser.isSeller ? buyerId : sellerId,
+          };
+
+          const { data } = await createConversation(conversation);
+          navigate(`/message/${data.id}`);
+        }
+      }
+    },
+    [currentUser, navigate]
+  );
 
   return (
     <main className='orders'>
@@ -49,6 +83,7 @@ const Orders = () => {
                         src='/img/message.png'
                         alt='message icon'
                         className='message'
+                        onClick={() => handleContact(order)}
                       />
                     </td>
                   </tr>
