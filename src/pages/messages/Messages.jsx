@@ -45,10 +45,23 @@ const Messages = () => {
             </thead>
             <tbody>
               {data.map((conversation) => {
-                const { id, sellerId, buyerId, lastMessage, updatedAt } =
-                  conversation;
+                const {
+                  id,
+                  sellerId,
+                  buyerId,
+                  lastMessage,
+                  readBySeller,
+                  readByBuyer,
+                  updatedAt,
+                } = conversation;
                 return (
-                  <tr key={id} className='active'>
+                  <tr
+                    key={id}
+                    className={
+                      (currentUser.isSeller && !readBySeller) ||
+                      (!currentUser.isSeller && !readByBuyer && 'active')
+                    }
+                  >
                     <td>{currentUser.isSeller ? buyerId : sellerId}</td>
                     <td>
                       <Link to={`/message/123`}>
@@ -57,7 +70,10 @@ const Messages = () => {
                     </td>
                     <td>{moment(updatedAt).fromNow()}</td>
                     <td>
-                      <button>Mark as Read</button>
+                      {(currentUser.isSeller && !readBySeller) ||
+                        (!currentUser.isSeller && !readByBuyer && (
+                          <button>Mark as Read</button>
+                        ))}
                     </td>
                   </tr>
                 );
