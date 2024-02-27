@@ -86,7 +86,9 @@ const Messages = () => {
                     <td>{currentUser.isSeller ? buyerId : sellerId}</td>
                     <td>
                       <Link to={`/message/${id}`}>
-                        {lastMessage && lastMessage.substring(0, 100)}...
+                        {lastMessage && lastMessage.length < 100
+                          ? lastMessage
+                          : lastMessage.substring(0, 100).concat('...')}
                       </Link>
                     </td>
                     <td>{moment(updatedAt).fromNow()}</td>
