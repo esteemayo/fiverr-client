@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { getFromStorage, userKey } from '../../utils';
-import { createMessage, getMessages } from '../../services/message';
+import { createMessage, getMessages } from '../../services/messageService';
 
 import './Message.scss';
 
