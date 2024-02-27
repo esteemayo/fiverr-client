@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Footer.scss';
 import { footerMenus } from '../../data';
+
+import './Footer.scss';
 
 const Footer = () => {
   const year = useMemo(() => {
