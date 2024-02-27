@@ -40,7 +40,7 @@ const Message = () => {
       };
 
       mutate(newMessage);
-      e.target.reset();
+      e.target[0].value = '';
     },
     [mutate]
   );
