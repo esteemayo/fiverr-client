@@ -1,40 +1,13 @@
 export const menus = [
-  {
-    id: 1,
-    label: 'Graphics & Design',
-  },
-  {
-    id: 2,
-    label: 'Video & Animation',
-  },
-  {
-    id: 3,
-    label: 'Writing & Translation',
-  },
-  {
-    id: 4,
-    label: 'AI Services',
-  },
-  {
-    id: 5,
-    label: 'Digital Marketing',
-  },
-  {
-    id: 6,
-    label: 'Music & Audio',
-  },
-  {
-    id: 7,
-    label: 'Programming & Tech',
-  },
-  {
-    id: 8,
-    label: 'Business',
-  },
-  {
-    id: 9,
-    label: 'Lifestyle',
-  },
+  { id: 1, label: 'Graphics & Design' },
+  { id: 2, label: 'Video & Animation' },
+  { id: 3, label: 'Writing & Translation' },
+  { id: 4, label: 'AI Services' },
+  { id: 5, label: 'Digital Marketing' },
+  { id: 6, label: 'Music & Audio' },
+  { id: 7, label: 'Programming & Tech' },
+  { id: 8, label: 'Business' },
+  { id: 9, label: 'Lifestyle' },
 ];
 
 export const footerMenus = [
