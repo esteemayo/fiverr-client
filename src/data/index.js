@@ -37,6 +37,77 @@ export const menus = [
   },
 ];
 
+export const footerMenus = [
+  {
+    title: 'Categories',
+    links: [
+      { id: 1, label: 'Graphics & Design' },
+      { id: 2, label: 'Digital Marketing' },
+      { id: 3, label: 'Writing & Translation' },
+      { id: 4, label: 'Video & Animation' },
+      { id: 5, label: 'Music & Audio' },
+      { id: 6, label: 'Programming & Tech' },
+      { id: 7, label: 'Data' },
+      { id: 8, label: 'Business' },
+      { id: 9, label: 'Lifestyle' },
+      { id: 10, label: 'Photography' },
+      { id: 11, label: 'Sitemap' },
+    ],
+  },
+  {
+    title: 'About',
+    links: [
+      { id: 1, label: 'Press & News' },
+      { id: 2, label: 'Partnerships' },
+      { id: 3, label: 'Privacy Policy' },
+      { id: 4, label: 'Terms of Service' },
+      { id: 5, label: 'Intellectual Property Claims' },
+      { id: 6, label: 'Investor Relations' },
+      { id: 7, label: 'Contact Sales' },
+    ],
+  },
+  {
+    title: 'Support',
+    links: [
+      { id: 1, label: 'Help & Support' },
+      { id: 2, label: 'Trust & Safety' },
+      { id: 3, label: 'Selling on Fiverr' },
+      { id: 4, label: 'Buying on Fiverr' },
+    ],
+  },
+  {
+    title: 'Community',
+    links: [
+      { id: 1, label: 'Customer Success Stories' },
+      { id: 2, label: 'Community hub' },
+      { id: 3, label: 'Forum' },
+      { id: 4, label: 'Events' },
+      { id: 5, label: 'Blog' },
+      { id: 6, label: 'Influencers' },
+      { id: 7, label: 'Affiliates' },
+      { id: 8, label: 'Podcast' },
+      { id: 9, label: 'Invite a Friend' },
+      { id: 10, label: 'Become a seller' },
+      { id: 11, label: 'Community Standards' },
+    ],
+  },
+  {
+    title: 'More From Fiverr',
+    links: [
+      { id: 1, label: 'Fiverr Business' },
+      { id: 2, label: 'Fiverr Pro' },
+      { id: 3, label: 'Fiverr Logo Maker' },
+      { id: 4, label: 'Fiverr Guides' },
+      { id: 5, label: 'Get inspired' },
+      { id: 6, label: 'Fiverr Select' },
+      { id: 7, label: 'ClearVoice' },
+      { id: 8, label: 'Fiverr Workspace' },
+      { id: 9, label: 'Learn' },
+      { id: 10, label: 'Working Not Working' },
+    ],
+  },
+];
+
 export const cards = [
   {
     id: 1,
