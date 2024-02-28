@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
-import { footerMenus } from '../../data';
+import { footerMenus, socials } from '../../data';
 
 import './Footer.scss';
 
@@ -38,11 +38,10 @@ const Footer = () => {
           </div>
           <div className='right'>
             <div className='social'>
-              <img src='/img/twitter.png' alt='twitter' />
-              <img src='/img/facebook.png' alt='facebook' />
-              <img src='/img/linkedin.png' alt='linkedin' />
-              <img src='/img/pinterest.png' alt='pinterest' />
-              <img src='/img/instagram.png' alt='instagram' />
+              {socials.map((social) => {
+                const { id, img, alt } = social;
+                return <img key={id} src={img} alt={alt} />;
+              })}
             </div>
             <div className='link'>
               <img src='/img/language.png' alt='language' />
