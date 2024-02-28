@@ -10,6 +10,13 @@ export const menus = [
   { id: 9, label: 'Lifestyle' },
 ];
 
+export const services = [
+  { id: 1, label: 'Web Design' },
+  { id: 2, label: 'WordPress' },
+  { id: 3, label: 'Logo Design' },
+  { id: 4, label: 'AI Services' },
+];
+
 export const footerMenus = [
   {
     title: 'Categories',
