@@ -1,6 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { services } from '../../data';
+
 import './Featured.scss';
 
 const Featured = () => {
@@ -32,10 +34,10 @@ const Featured = () => {
           </div>
           <div className='popular'>
             <span>Popular:</span>
-            <button>Web Design</button>
-            <button>WordPress</button>
-            <button>Logo Design</button>
-            <button>AI Services</button>
+            {services.map((service) => {
+              const { id, label } = service;
+              return <button key={id}>{label}</button>;
+            })}
           </div>
         </div>
         <div className='right'>
