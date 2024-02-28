@@ -81,6 +81,14 @@ export const footerMenus = [
   },
 ];
 
+export const socials = [
+  { id: 1, img: '/img/twitter.png', alt: 'twitter' },
+  { id: 2, img: '/img/facebook.png', alt: 'facebook' },
+  { id: 3, img: '/img/linkedin.png', alt: 'linkedin' },
+  { id: 4, img: '/img/pinterest.png', alt: 'pinterest' },
+  { id: 5, img: '/img/instagram.png', alt: 'instagram' },
+];
+
 export const cards = [
   {
     id: 1,
