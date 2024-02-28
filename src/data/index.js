@@ -90,8 +90,8 @@ export const socials = [
 ];
 
 export const footerLinks = [
-  { id: 1, icon: '/img/language.png', alt: 'language' },
-  { id: 2, icon: '/img/coin.png', alt: 'coin' },
+  { id: 1, icon: 'language', text: 'English' },
+  { id: 2, icon: 'coin', text: 'USD' },
 ];
 
 export const cards = [
