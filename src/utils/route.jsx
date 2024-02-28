@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: 'pay',
+        path: 'pay/:id',
         element: <Pay />,
       },
       {
