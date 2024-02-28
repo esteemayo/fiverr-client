@@ -1,16 +1,16 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
-import { getFromStorage, userKey } from '../../utils';
+import { getCurrentUser } from '../../utils/getCurrentUser';
 
 import './MyGigs.scss';
 
 const MyGigs = () => {
-  const currentUser = getFromStorage(userKey)
+  const currentUser = getCurrentUser();
 
   const headerLabel = useMemo(() => {
-    return currentUser.isSeller ? 'Gigs' : 'Orders'
-  }, [currentUser])
+    return currentUser.isSeller ? 'Gigs' : 'Orders';
+  }, [currentUser]);
 
   return (
     <main className='myGigs'>
