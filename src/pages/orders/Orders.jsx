@@ -34,7 +34,6 @@ const Orders = () => {
         const { data } = await getConversation(conversationId);
         navigate(`/message/${data.id}`);
       } catch (err) {
-        console.log(err);
         if (err.response.status == 404) {
           const conversation = {
             to: currentUser.isSeller ? buyerId : sellerId,
