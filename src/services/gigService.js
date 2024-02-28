@@ -7,4 +7,7 @@ const gigUrl = (gigId) => `${apiEndpoint}/${gigId}`;
 export const getGigs = (search, min, max, sort) =>
   http.get(`${apiEndpoint}${search}&min=${min}&max=${max}&sort=${sort}`);
 
+export const getMyGigs = (userId) =>
+  http.get(`${apiEndpoint}?search=${userId}`);
+
 export const getGig = (gigId) => http.get(gigUrl(gigId));
