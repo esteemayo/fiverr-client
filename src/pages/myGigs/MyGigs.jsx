@@ -81,6 +81,7 @@ const MyGigs = () => {
                         src='/img/delete.png'
                         alt='delete icon'
                         className='delete'
+                        onClick={() => handleDelete(id)}
                       />
                     </td>
                   </tr>
