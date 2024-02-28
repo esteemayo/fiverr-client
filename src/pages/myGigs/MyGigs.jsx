@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useCallback, useMemo } from 'react';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { getMyGigs } from '../../services/gigService';
 import { getCurrentUser } from '../../utils/getCurrentUser';
+import { deleteGig, getMyGigs } from '../../services/gigService';
 
 import './MyGigs.scss';
 
@@ -18,6 +18,22 @@ const MyGigs = () => {
       return data;
     },
   });
+
+  const { mutate } = useMutation({
+    mutationFn: async (gigId) => {
+      return await deleteGig(gigId);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['myGigs'] });
+    },
+  });
+
+  const handleDelete = useCallback(
+    (gigId) => {
+      mutate(gigId);
+    },
+    [mutate]
+  );
 
   const headerLabel = useMemo(() => {
     return currentUser.isSeller ? 'Gigs' : 'Orders';
