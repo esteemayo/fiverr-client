@@ -89,6 +89,11 @@ export const socials = [
   { id: 5, img: '/img/instagram.png', alt: 'instagram' },
 ];
 
+export const footerLinks = [
+  { id: 1, icon: '/img/language.png', alt: 'language' },
+  { id: 2, icon: '/img/coin.png', alt: 'coin' },
+];
+
 export const cards = [
   {
     id: 1,
