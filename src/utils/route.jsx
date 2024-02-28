@@ -1,16 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import MyGigs from '../pages/myGigs/MyGigs';
-import Add from '../pages/add/Add';
+import Pay from '../pages/pay/Pay';
 import Orders from '../pages/orders/Orders';
-import Gig from '../pages/gig/Gig';
+import Add from '../pages/add/Add';
 import Message from '../pages/message/Message';
-import Home from '../pages/home/Home';
+import Gig from '../pages/gig/Gig';
 import Register from '../pages/register/Register';
-import Gigs from '../pages/gigs/Gigs';
+import Home from '../pages/home/Home';
 import Messages from '../pages/messages/Messages';
-import Login from '../pages/login/Login';
 import NotFound from '../pages/notFound/NotFound';
+import Gigs from '../pages/gigs/Gigs';
+import Success from '../pages/success/Success';
+import Login from '../pages/login/Login';
 
 import SharedLayout from '../components/sharedLayout/SharedLayout';
 
@@ -58,6 +60,14 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register />,
+      },
+      {
+        path: 'pay',
+        element: <Pay />,
+      },
+      {
+        path: 'success',
+        element: <Success />,
       },
       {
         path: '*',
