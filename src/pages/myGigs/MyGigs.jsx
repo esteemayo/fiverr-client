@@ -1,13 +1,22 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
+
+import { getFromStorage, userKey } from '../../utils';
 
 import './MyGigs.scss';
 
 const MyGigs = () => {
+  const currentUser = getFromStorage(userKey)
+
+  const headerLabel = useMemo(() => {
+    return currentUser.isSeller ? 'Gigs' : 'Orders'
+  }, [currentUser])
+
   return (
     <main className='myGigs'>
       <div className='container'>
         <div className='title'>
-          <h1>Gigs</h1>
+          <h1>{headerLabel}</h1>
           <Link to='/add'>
             <button>Add new gig</button>
           </Link>
