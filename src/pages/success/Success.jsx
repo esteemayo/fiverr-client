@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import './Success.scss';
 import { confirmOrder } from '../../services/orderService';
+
+import './Success.scss';
 
 const Success = () => {
   const navigate = useNavigate();
