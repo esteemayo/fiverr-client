@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
+
 import { formatCurrency } from '../../utils/formatCurrency';
 
 import './GigInfo.scss';
 
 const GigInfo = ({
+  _id: id,
   price,
   features,
   shortTitle,
@@ -37,7 +40,9 @@ const GigInfo = ({
           );
         })}
       </div>
-      <button>Continue</button>
+      <Link to={`/pay/${id}`}>
+        <button>Continue</button>
+      </Link>
     </aside>
   );
 };
