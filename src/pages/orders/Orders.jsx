@@ -8,14 +8,14 @@ import {
   getConversation,
 } from '../../services/conversationService';
 
-import { getFromStorage, userKey } from '../../utils';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { getCurrentUser } from '../../utils/getCurrentUser';
 
 import './Orders.scss';
 
 const Orders = () => {
   const navigate = useNavigate();
-  const currentUser = getFromStorage(userKey);
+  const currentUser = getCurrentUser();
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['orders'],
