@@ -1,6 +1,31 @@
+import { useCallback, useReducer, useState } from 'react';
+
+import { INITIAL_STATE, gigReducer } from '../../reducers/gigReducer';
+
 import './Add.scss';
 
 const Add = () => {
+  const [uploading, setUploading] = useState(false);
+  const [files, setFiles] = useState(undefined);
+  const [singleFile, setSingleFile] = useState(undefined);
+
+  const [state, dispatch] = useReducer(gigReducer, INITIAL_STATE);
+
+  const handleChange = useCallback(
+    ({ target: input }) => {
+      const { name, value } = input;
+
+      dispatch({
+        type: 'CHANGE_INPUT',
+        payload: {
+          name,
+          value,
+        },
+      });
+    },
+    [dispatch]
+  );
+
   return (
     <main className='add'>
       <div className='container'>
@@ -12,12 +37,14 @@ const Add = () => {
               <input
                 type='text'
                 id='title'
+                name='title'
                 placeholder="e.g. I will do something I'm really good at"
+                onChange={handleChange}
               />
             </div>
             <div className='formGroup'>
               <label htmlFor='category'>Category</label>
-              <select name='category' id='category'>
+              <select name='category' id='category' onChange={handleChange}>
                 <option value='design'>Design</option>
                 <option value='web'>Web Development</option>
                 <option value='animation'>Animation</option>
@@ -26,11 +53,22 @@ const Add = () => {
             </div>
             <div className='formGroup'>
               <label htmlFor='file'>Cover Image</label>
-              <input type='file' id='file' accept='image/*' />
+              <input
+                type='file'
+                id='file'
+                accept='image/*'
+                onChange={(e) => setSingleFile(e.target.files[0])}
+              />
             </div>
             <div className='formGroup'>
               <label htmlFor='images'>upload Images</label>
-              <input type='file' id='images' accept='image/*' multiple />
+              <input
+                type='file'
+                id='images'
+                accept='image/*'
+                onChange={(e) => setFiles(e.target.files)}
+                multiple
+              />
             </div>
             <div className='formGroup'>
               <label htmlFor='desc'>Description</label>
@@ -40,48 +78,71 @@ const Add = () => {
                 cols='30'
                 rows='10'
                 placeholder='Brief descriptions to introduce your service to customers'
+                onChange={handleChange}
               />
             </div>
             <button>Create</button>
           </div>
           <div className='right'>
             <div className='formGroup'>
-              <label htmlFor='service'>Service Title</label>
+              <label htmlFor='shortTitle'>Short Title</label>
               <input
                 type='text'
-                id='service'
+                id='shortTitle'
+                name='shortTitle'
                 placeholder='e.g. One page web design'
+                onChange={handleChange}
               />
             </div>
             <div className='formGroup'>
-              <label htmlFor='short-desc'>Short Description</label>
+              <label htmlFor='shortDesc'>Short Description</label>
               <textarea
                 type='text'
-                id='short-desc'
-                name='short-desc'
+                id='shortDesc'
+                name='shortDesc'
                 cols='30'
                 rows='10'
                 placeholder='Short description of your service'
+                onChange={handleChange}
               />
             </div>
             <div className='formGroup'>
-              <label htmlFor='delivery-time'>Delivery Time(e.g. 3 days)</label>
-              <input type='number' id='delivery-time' min={1} />
+              <label htmlFor='deliveryTime'>Delivery Time(e.g. 3 days)</label>
+              <input
+                type='number'
+                id='deliveryTime'
+                name='deliveryTime'
+                min={1}
+                onChange={handleChange}
+              />
             </div>
             <div className='formGroup'>
-              <label htmlFor='revision'>Revision Number</label>
-              <input type='number' id='revision' />
+              <label htmlFor='revisionNumber'>Revision Number</label>
+              <input
+                type='number'
+                id='revisionNumber'
+                name='revisionNumber'
+                onChange={handleChange}
+              />
             </div>
             <div className='formGroup'>
               <label htmlFor='features'>Add Features</label>
-              <input type='text' placeholder='e.g. page design' />
-              <input type='text' placeholder='e.g. file uploading' />
-              <input type='text' placeholder='e.g. setting up a domain' />
-              <input type='text' placeholder='e.g. hosting' />
+              <input
+                type='text'
+                id='features'
+                name='features'
+                placeholder='e.g. page design'
+              />
             </div>
             <div className='formGroup'>
               <label htmlFor='price'>Price</label>
-              <input type='number' id='price' name='price' min={1} />
+              <input
+                type='number'
+                id='price'
+                name='price'
+                min={1}
+                onChange={handleChange}
+              />
             </div>
           </div>
         </section>
