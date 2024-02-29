@@ -68,7 +68,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'message/:id',
-        element: <Message />,
+        element: (
+          <AuthRoute>
+            <Message />
+          </AuthRoute>
+        ),
       },
       {
         path: 'login',
