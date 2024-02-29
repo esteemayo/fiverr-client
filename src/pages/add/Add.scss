@@ -29,6 +29,18 @@
       }
 
       .left {
+        .images {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          .imagesInputs {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+          }
+        }
+
         button {
           display: inline-block;
           border: none;
