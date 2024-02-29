@@ -92,6 +92,18 @@
         .addedFeatures {
           display: flex;
           gap: 2rem;
+
+          .item {
+            button {
+              outline: none;
+              height: 3rem;
+              font-weight: 400;
+              font-size: 1.2rem;
+              background-color: transparent;
+              color: #ff6347;
+              border: 1px solid currentColor;
+            }
+          }
         }
       }
 
