@@ -26,10 +26,6 @@ const Navbar = () => {
     setIsActive(window.scrollY > 0 ? true : false);
   }, []);
 
-  const handleClick = useCallback(() => {
-    return navigate('/register');
-  }, [navigate]);
-
   const handleLogout = useCallback(async () => {
     try {
       await logout();
@@ -67,7 +63,11 @@ const Navbar = () => {
           <span>English</span>
           {!currentUser && <Link to='/login'>Sign in</Link>}
           {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {!currentUser && <button onClick={handleClick}>Join</button>}
+          {!currentUser && (
+            <Link to='/register'>
+              <button>Join</button>
+            </Link>
+          )}
           {!!currentUser && (
             <div className='user' onClick={handleToggle}>
               <img src={currentUser.img ?? '/img/noavatar.jpg'} alt='avatar' />
