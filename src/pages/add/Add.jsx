@@ -172,7 +172,7 @@ const Add = () => {
                 onChange={handleChange}
               />
             </div>
-            <form onSubmit={handleFeature}>
+            <form className='add' onSubmit={handleFeature}>
               <div className='formGroup'>
                 <label htmlFor='features'>Add Features</label>
                 <input
