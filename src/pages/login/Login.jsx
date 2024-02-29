@@ -1,5 +1,5 @@
-import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { login } from '../../services/authService';
 import { setToStorage, userKey } from '../../utils';
@@ -12,6 +12,7 @@ const initialState = {
 };
 
 const Login = () => {
+  const usernameRef = useRef();
   const navigate = useNavigate();
 
   const [error, setError] = useState(null);
@@ -41,6 +42,10 @@ const Login = () => {
     [data, navigate, setToStorage]
   );
 
+  useEffect(() => {
+    usernameRef.current.focus();
+  }, []);
+
   return (
     <main className='login'>
       <div className='container'>
@@ -53,6 +58,7 @@ const Login = () => {
                 type='text'
                 id='username'
                 name='username'
+                ref={usernameRef}
                 placeholder='johndoe'
                 onChange={handleChange}
               />
