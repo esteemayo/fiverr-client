@@ -30,9 +30,12 @@ const Add = () => {
     [dispatch]
   );
 
-  const handleDeleteFeature = useCallback(() => {
-    dispatch({ type: 'REMOVE_FEATURE' });
-  }, [dispatch]);
+  const handleDeleteFeature = useCallback(
+    (feature) => {
+      dispatch({ type: 'REMOVE_FEATURE', payload: feature });
+    },
+    [dispatch]
+  );
 
   const handleUploads = useCallback(async () => {
     setUploading(true);
@@ -181,7 +184,7 @@ const Add = () => {
               {state?.features?.map((feature) => {
                 return (
                   <div key={feature} className='item'>
-                    <button onClick={handleDeleteFeature}>
+                    <button onClick={() => handleDeleteFeature(feature)}>
                       {feature}
                       <span>X</span>
                     </button>
