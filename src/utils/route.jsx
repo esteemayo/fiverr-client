@@ -84,11 +84,19 @@ export const router = createBrowserRouter([
       },
       {
         path: 'pay/:id',
-        element: <Pay />,
+        element: (
+          <AuthRoute>
+            <Pay />
+          </AuthRoute>
+        ),
       },
       {
         path: 'success',
-        element: <Success />,
+        element: (
+          <AuthRoute>
+            <Success />
+          </AuthRoute>
+        ),
       },
       {
         path: '*',
