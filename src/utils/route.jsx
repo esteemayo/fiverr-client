@@ -16,6 +16,7 @@ import Login from '../pages/login/Login';
 
 import AuthRoute from './AuthRoute';
 import SharedLayout from '../components/sharedLayout/SharedLayout';
+import ProtectedRoute from './ProtectedRoute';
 
 export const router = createBrowserRouter([
   {
@@ -76,11 +77,19 @@ export const router = createBrowserRouter([
       },
       {
         path: 'login',
-        element: <Login />,
+        element: (
+          <ProtectedRoute>
+            <Login />
+          </ProtectedRoute>
+        ),
       },
       {
         path: 'register',
-        element: <Register />,
+        element: (
+          <ProtectedRoute>
+            <Register />
+          </ProtectedRoute>
+        ),
       },
       {
         path: 'pay/:id',
