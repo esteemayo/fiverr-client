@@ -26,6 +26,18 @@ const Add = () => {
     [dispatch]
   );
 
+  const handleFeature = useCallback(
+    (e) => {
+      dispatch({
+        type: 'ADD_FEATURES',
+        payload: e.target[0].value,
+      });
+
+      e.target[0].value = '';
+    },
+    [dispatch]
+  );
+
   return (
     <main className='add'>
       <div className='container'>
@@ -125,15 +137,18 @@ const Add = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className='formGroup'>
-              <label htmlFor='features'>Add Features</label>
-              <input
-                type='text'
-                id='features'
-                name='features'
-                placeholder='e.g. page design'
-              />
-            </div>
+            <form onSubmit={handleFeature}>
+              <div className='formGroup'>
+                <label htmlFor='features'>Add Features</label>
+                <input
+                  type='text'
+                  id='features'
+                  name='features'
+                  placeholder='e.g. page design'
+                />
+              </div>
+              <button type='submit'>Add</button>
+            </form>
             <div className='formGroup'>
               <label htmlFor='price'>Price</label>
               <input
