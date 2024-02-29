@@ -11,7 +11,7 @@ export const INITIAL_STATE = {
   shortDesc: '',
   deliveryTime: 0,
   revisionNumber: 0,
-  features: '',
+  features: [],
   price: 0,
 };
 
