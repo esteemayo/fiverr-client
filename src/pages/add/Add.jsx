@@ -31,11 +31,7 @@ const Add = () => {
     (e) => {
       e.preventDefault();
 
-      dispatch({
-        type: 'ADD_FEATURES',
-        payload: e.target[0].value,
-      });
-
+      dispatch({ type: 'ADD_FEATURES', payload: e.target[0].value });
       e.target[0].value = '';
     },
     [dispatch]
