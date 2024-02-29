@@ -14,6 +14,7 @@ import Gigs from '../pages/gigs/Gigs';
 import Success from '../pages/success/Success';
 import Login from '../pages/login/Login';
 
+import AuthRoute from './AuthRoute';
 import SharedLayout from '../components/sharedLayout/SharedLayout';
 
 export const router = createBrowserRouter([
@@ -39,7 +40,9 @@ export const router = createBrowserRouter([
       },
       {
         path: 'mygigs',
-        element: <MyGigs />,
+        element: <AuthRoute>
+          <MyGigs />
+        </AuthRoute>,
       },
       {
         path: 'add',
