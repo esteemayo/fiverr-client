@@ -17,6 +17,34 @@ export const services = [
   { id: 4, label: 'AI Services' },
 ];
 
+export const trustedBy = [
+  {
+    id: 1,
+    img: 'https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/facebook2x.188a797.png',
+    desc: 'facebook',
+  },
+  {
+    id: 2,
+    img: 'https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/google2x.06d74c8.png',
+    desc: 'google',
+  },
+  {
+    id: 3,
+    img: 'https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/netflix2x.887e47e.png',
+    desc: 'netflix',
+  },
+  {
+    id: 4,
+    img: 'https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/pandg2x.6dc32e4.png',
+    desc: 'pandg',
+  },
+  {
+    id: 5,
+    img: 'https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/paypal2x.22728be.png',
+    desc: 'paypal',
+  },
+];
+
 export const features = [
   {
     id: 1,
