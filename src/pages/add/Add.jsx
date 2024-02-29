@@ -1,11 +1,27 @@
 import { useCallback, useMemo, useReducer, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
+import { createGig } from '../../services/gigService';
 import { upload } from '../../utils/upload';
 import { INITIAL_STATE, gigReducer } from '../../reducers/gigReducer';
 
 import './Add.scss';
 
 const Add = () => {
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+
+  const { mutate } = useMutation({
+    mutationFn: async (gig) => {
+      const { data } = await createGig(gig);
+      return data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['myGigs'] });
+    },
+  });
+
   const [uploading, setUploading] = useState(false);
   const [files, setFiles] = useState(undefined);
   const [singleFile, setSingleFile] = useState(undefined);
@@ -57,6 +73,16 @@ const Add = () => {
       setUploading(false);
     }
   }, [dispatch, files, singleFile, upload]);
+
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
+
+      mutate(state);
+      navigate('/myGigs');
+    },
+    [mutate, navigate, state]
+  );
 
   const uploadLabel = useMemo(() => {
     return uploading ? 'Uploading' : 'Upload';
@@ -124,7 +150,7 @@ const Add = () => {
                 onChange={handleChange}
               />
             </div>
-            <button>Create</button>
+            <button onClick={handleSubmit}>Create</button>
           </div>
           <div className='right'>
             <div className='formGroup'>
