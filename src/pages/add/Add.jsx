@@ -41,6 +41,10 @@ const Add = () => {
     [dispatch]
   );
 
+  const handleDeleteFeature = useCallback(() => {
+    dispatch({ type: 'REMOVE_FEATURE' });
+  }, [dispatch]);
+
   const handleUploads = useCallback(async () => {
     setUploading(true);
 
@@ -188,7 +192,7 @@ const Add = () => {
               {state?.features?.map((feature) => {
                 return (
                   <div key={feature} className='item'>
-                    <button>
+                    <button onClick={handleDeleteFeature}>
                       {feature}
                       <span>X</span>
                     </button>
