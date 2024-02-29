@@ -56,6 +56,19 @@
         }
       }
 
+      .right {
+        .add {
+          display: flex;
+          justify-content: space-between;
+
+          .formGroup {
+            input {
+              width: 100%;
+            }
+          }
+        }
+      }
+
       .formGroup {
         display: flex;
         flex-direction: column;
