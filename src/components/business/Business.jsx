@@ -1,3 +1,5 @@
+import { businesses } from '../../data';
+
 import '../features/Features.scss';
 
 const Business = () => {
@@ -11,22 +13,15 @@ const Business = () => {
             Upgrade to a curated experience packed with tools and benefits,
             dedicated to businesses
           </p>
-          <div className='title'>
-            <img src='/img/check.png' alt='check icon' />
-            <span>Connect to freelancers with proven business experience</span>
-          </div>
-          <div className='title'>
-            <img src='/img/check.png' alt='check icon' />
-            <span>
-              Get matched with the perfect talent by a customer success manager
-            </span>
-          </div>
-          <div className='title'>
-            <img src='/img/check.png' alt='check icon' />
-            <span>
-              Manage teamwork and boost productivity with one powerful workspace
-            </span>
-          </div>
+          {businesses.map((business) => {
+            const { id, desc } = business;
+            return (
+              <div key={id} className='title'>
+                <img src='/img/check.png' alt='check icon' />
+                <span>{desc}</span>
+              </div>
+            );
+          })}
           <button>Explore Fiverr Business</button>
         </div>
         <div className='item'>
