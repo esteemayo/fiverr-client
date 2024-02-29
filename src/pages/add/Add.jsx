@@ -15,14 +15,7 @@ const Add = () => {
   const handleChange = useCallback(
     ({ target: input }) => {
       const { name, value } = input;
-
-      dispatch({
-        type: 'CHANGE_INPUT',
-        payload: {
-          name,
-          value,
-        },
-      });
+      dispatch({ type: 'CHANGE_INPUT', payload: { name, value } });
     },
     [dispatch]
   );
