@@ -1,5 +1,6 @@
 import { useCallback, useReducer, useState } from 'react';
 
+import { upload } from '../../utils/upload';
 import { INITIAL_STATE, gigReducer } from '../../reducers/gigReducer';
 
 import './Add.scss';
@@ -40,6 +41,27 @@ const Add = () => {
     [dispatch]
   );
 
+  const handleUploads = useCallback(async () => {
+    setUploading(true);
+
+    try {
+      const cover = await upload(singleFile);
+
+      const images = await Promise.all(
+        [...files].map(async (file) => {
+          const url = await upload(file);
+          return url;
+        })
+      );
+
+      dispatch({ type: 'ADD_IMAGES', payload: { cover, images } });
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setUploading(false);
+    }
+  }, [dispatch, files, singleFile, upload]);
+
   return (
     <main className='add'>
       <div className='container'>
@@ -65,24 +87,29 @@ const Add = () => {
                 <option value='music'>Music</option>
               </select>
             </div>
-            <div className='formGroup'>
-              <label htmlFor='file'>Cover Image</label>
-              <input
-                type='file'
-                id='file'
-                accept='image/*'
-                onChange={(e) => setSingleFile(e.target.files[0])}
-              />
-            </div>
-            <div className='formGroup'>
-              <label htmlFor='images'>upload Images</label>
-              <input
-                type='file'
-                id='images'
-                accept='image/*'
-                onChange={(e) => setFiles(e.target.files)}
-                multiple
-              />
+            <div className='images'>
+              <div className='imagesInputs'>
+                <div className='formGroup'>
+                  <label htmlFor='file'>Cover Image</label>
+                  <input
+                    type='file'
+                    id='file'
+                    accept='image/*'
+                    onChange={(e) => setSingleFile(e.target.files[0])}
+                  />
+                </div>
+                <div className='formGroup'>
+                  <label htmlFor='images'>upload Images</label>
+                  <input
+                    type='file'
+                    id='images'
+                    accept='image/*'
+                    onChange={(e) => setFiles(e.target.files)}
+                    multiple
+                  />
+                </div>
+                <button>Upload</button>
+              </div>
             </div>
             <div className='formGroup'>
               <label htmlFor='desc'>Description</label>
