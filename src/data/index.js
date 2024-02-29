@@ -31,14 +31,14 @@ export const features = [
   {
     id: 3,
     title: 'Protected payments, every time',
-    desc: 'Always know what you\'ll pay upfront. Your payment isn\'t released until you approve the work.',
+    desc: "Always know what you'll pay upfront. Your payment isn't released until you approve the work.",
   },
   {
     id: 4,
     title: '24/7 support',
     desc: 'Find high-quality services at every price point. No hourly rates, just project-based pricing.',
   },
-]
+];
 
 export const footerMenus = [
   {
