@@ -28,6 +28,8 @@ const Add = () => {
 
   const handleFeature = useCallback(
     (e) => {
+      e.preventDefault();
+
       dispatch({
         type: 'ADD_FEATURES',
         payload: e.target[0].value,
