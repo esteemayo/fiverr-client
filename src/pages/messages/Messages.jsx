@@ -3,7 +3,7 @@ import moment from 'moment';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 
-import { getFromStorage, userKey } from '../../utils';
+import { getCurrentUser } from '../../utils/getCurrentUser';
 import {
   getConversations,
   updateConversation,
@@ -13,7 +13,7 @@ import './Messages.scss';
 
 const Messages = () => {
   const queryClient = useQueryClient();
-  const currentUser = getFromStorage(userKey);
+  const currentUser = getCurrentUser();
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['conversations'],
