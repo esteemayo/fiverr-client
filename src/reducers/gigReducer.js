@@ -1,7 +1,4 @@
-import { getCurrentUser } from '../utils/getCurrentUser';
-
 export const INITIAL_STATE = {
-  user: getCurrentUser()?._id,
   title: '',
   category: '',
   cover: '',
