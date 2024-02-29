@@ -185,12 +185,16 @@ const Add = () => {
               <button type='submit'>Add</button>
             </form>
             <div className='addedFeatures'>
-              <div className='item'>
-                <button>
-                  feature
-                  <span>X</span>
-                </button>
-              </div>
+              {state?.features?.map((feature) => {
+                return (
+                  <div key={feature} className='item'>
+                    <button>
+                      {feature}
+                      <span>X</span>
+                    </button>
+                  </div>
+                );
+              })}
             </div>
             <div className='formGroup'>
               <label htmlFor='price'>Price</label>
