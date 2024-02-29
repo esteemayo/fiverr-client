@@ -17,6 +17,29 @@ export const services = [
   { id: 4, label: 'AI Services' },
 ];
 
+export const features = [
+  {
+    id: 1,
+    title: 'The best for every budget',
+    desc: 'Find high-quality services at every price point. No hourly rates, just project-based pricing.',
+  },
+  {
+    id: 2,
+    title: 'Quality work done quickly',
+    desc: 'Find the right freelancer to begin working on your project within minutes.',
+  },
+  {
+    id: 3,
+    title: 'Protected payments, every time',
+    desc: 'Always know what you\'ll pay upfront. Your payment isn\'t released until you approve the work.',
+  },
+  {
+    id: 4,
+    title: '24/7 support',
+    desc: 'Find high-quality services at every price point. No hourly rates, just project-based pricing.',
+  },
+]
+
 export const footerMenus = [
   {
     title: 'Categories',
