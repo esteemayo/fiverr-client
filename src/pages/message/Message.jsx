@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useCallback } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { getFromStorage, userKey } from '../../utils';
+import { getCurrentUser } from '../../utils/getCurrentUser';
 import { createMessage, getMessages } from '../../services/messageService';
 
 import './Message.scss';
@@ -11,7 +11,7 @@ const Message = () => {
   const { id } = useParams();
   const queryClient = useQueryClient();
 
-  const currentUser = getFromStorage(userKey);
+  const currentUser = getCurrentUser();
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['messages'],
