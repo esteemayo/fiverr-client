@@ -24,7 +24,7 @@ const Features = () => {
           })}
         </div>
         <div className='item'>
-          <video src='img/video.mp4' controls></video>
+          <video src='/img/video.mp4' controls></video>
         </div>
       </div>
     </section>
