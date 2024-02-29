@@ -4,8 +4,10 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import Menu from '../menu/Menu';
 import MenuOptions from '../menuOptions/MenuOptions';
 
+import { userKey, setToStorage } from '../../utils';
+import { getCurrentUser } from '../../utils/getCurrentUser';
+
 import { logout } from '../../services/authService';
-import { userKey, getFromStorage, setToStorage } from '../../utils';
 
 import './Navbar.scss';
 
@@ -48,7 +50,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', isActiveHandler);
   }, [isActiveHandler]);
 
-  const currentUser = getFromStorage(userKey);
+  const currentUser = getCurrentUser();
 
   return (
     <nav className={navClasses}>
