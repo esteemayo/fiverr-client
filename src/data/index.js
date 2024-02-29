@@ -40,6 +40,21 @@ export const features = [
   },
 ];
 
+export const businesses = [
+  {
+    id: 1,
+    desc: 'Connect to freelancers with proven business experience',
+  },
+  {
+    id: 2,
+    desc: 'Get matched with the perfect talent by a customer success manager',
+  },
+  {
+    id: 3,
+    desc: 'Manage teamwork and boost productivity with one powerful workspace',
+  },
+];
+
 export const footerMenus = [
   {
     title: 'Categories',
