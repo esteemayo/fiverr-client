@@ -1,4 +1,4 @@
-import { useCallback, useReducer, useState } from 'react';
+import { useCallback, useMemo, useReducer, useState } from 'react';
 
 import { upload } from '../../utils/upload';
 import { INITIAL_STATE, gigReducer } from '../../reducers/gigReducer';
@@ -62,6 +62,10 @@ const Add = () => {
     }
   }, [dispatch, files, singleFile, upload]);
 
+  const uploadLabel = useMemo(() => {
+    return uploading ? 'Uploading' : 'Upload';
+  }, []);
+
   return (
     <main className='add'>
       <div className='container'>
@@ -108,7 +112,7 @@ const Add = () => {
                     multiple
                   />
                 </div>
-                <button>Upload</button>
+                <button>{uploadLabel}</button>
               </div>
             </div>
             <div className='formGroup'>
