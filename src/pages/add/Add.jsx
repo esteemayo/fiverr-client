@@ -112,7 +112,9 @@ const Add = () => {
                     multiple
                   />
                 </div>
-                <button>{uploadLabel}</button>
+                <button disabled={uploading} onClick={handleUploads}>
+                  {uploadLabel}
+                </button>
               </div>
             </div>
             <div className='formGroup'>
