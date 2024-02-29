@@ -68,6 +68,8 @@
 
             input {
               width: 100%;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
             }
           }
 
@@ -82,7 +84,7 @@
             padding: 2rem;
             background-color: var(--clr-primary-green);
             color: var(--clr-white);
-            border-radius: 0.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
             cursor: pointer;
           }
         }
