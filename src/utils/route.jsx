@@ -60,7 +60,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'messages',
-        element: <Messages />,
+        element: (
+          <AuthRoute>
+            <Messages />
+          </AuthRoute>
+        ),
       },
       {
         path: 'message/:id',
