@@ -36,17 +36,27 @@ export const router = createBrowserRouter([
       },
       {
         path: 'orders',
-        element: <Orders />,
+        element: (
+          <AuthRoute>
+            <Orders />
+          </AuthRoute>
+        ),
       },
       {
         path: 'mygigs',
-        element: <AuthRoute>
-          <MyGigs />
-        </AuthRoute>,
+        element: (
+          <AuthRoute>
+            <MyGigs />
+          </AuthRoute>
+        ),
       },
       {
         path: 'add',
-        element: <Add />,
+        element: (
+          <AuthRoute>
+            <Add />
+          </AuthRoute>
+        ),
       },
       {
         path: 'messages',
