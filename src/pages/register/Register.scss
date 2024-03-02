@@ -93,7 +93,7 @@
           transition: 0.4s;
           border-radius: 2.4rem;
 
-          &:before {
+          &::before {
             display: inline-block;
             content: '';
             width: 1.6rem;
