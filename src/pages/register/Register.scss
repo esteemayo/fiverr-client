@@ -1,11 +1,14 @@
 .register {
   display: flex;
+  align-items: center;
   justify-content: center;
 
   form {
+    width: 96rem;
+    padding: 10rem 0;
+
     display: flex;
-    justify-content: space-between;
-    gap: 10rem;
+    gap: 20rem;
 
     .left,
     .right {
