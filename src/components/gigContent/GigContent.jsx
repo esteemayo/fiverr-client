@@ -7,16 +7,15 @@ import './GigContent.scss';
 
 const GigContent = ({
   desc,
-  user,
   title,
   images,
   _id: id,
   starNumber,
   totalStars,
   createdAt,
-  isLoading,
-  error,
   data,
+  error,
+  isLoading,
 }) => {
   return (
     <section className='gigContent'>

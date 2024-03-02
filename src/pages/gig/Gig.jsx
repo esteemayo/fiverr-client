@@ -45,9 +45,9 @@ const Gig = () => {
         <div className='container'>
           <GigContent
             {...data}
-            isLoading={isLoadingUser}
-            error={errorUser}
             data={dataUser}
+            error={errorUser}
+            isLoading={isLoadingUser}
           />
           <GigInfo {...data} />
         </div>
