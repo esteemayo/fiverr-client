@@ -2,98 +2,93 @@
   display: flex;
   justify-content: center;
 
-  .container {
-    width: 80rem;
-    padding: 5rem 0;
+  form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
 
-    form {
+    .left,
+    .right {
+      flex: 1;
+
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      gap: 10rem;
+      gap: 1rem;
 
-      .left,
-      .right {
-        flex: 1;
+      h1 {
+        font-weight: 300;
+        color: gray;
+        margin-bottom: 3rem;
+      }
 
+      .formGroup {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 1rem;
 
-        h1 {
-          font-weight: 300;
-          color: gray;
-          margin-bottom: 3rem;
-        }
-
-        .formGroup {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          gap: 1rem;
-
-          label {
-            display: inline-block;
-            font-size: 1.8rem;
-            color: gray;
-          }
-
-          input,
-          textarea {
-            display: inline-block;
-            font-family: inherit;
-            outline: none;
-            font-size: var(--default-font-size);
-            padding: 2rem;
-            background-color: transparent;
-            color: #999;
-            border: 1px solid rgb(224, 224, 224);
-            border-radius: 0.5rem;
-            caret-color: var(--clr-primary-green);
-
-            &::placeholder {
-              font-size: 1.5rem;
-              color: #ccc;
-            }
-          }
-        }
-
-        .toggle {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-
-          label {
-            display: inline-block;
-            font-size: 1.8rem;
-            color: gray;
-          }
-        }
-      }
-
-      .left {
-        button {
+        label {
           display: inline-block;
-          border: none;
-          outline: none;
-          text-transform: capitalize;
-          font-weight: 500;
           font-size: 1.8rem;
+          color: gray;
+        }
+
+        input,
+        textarea {
+          display: inline-block;
+          font-family: inherit;
+          outline: none;
+          font-size: var(--default-font-size);
           padding: 2rem;
-          background-color: var(--clr-primary-green);
-          color: var(--clr-white);
+          background-color: transparent;
+          color: #999;
+          border: 1px solid rgb(224, 224, 224);
           border-radius: 0.5rem;
-          cursor: pointer;
+          caret-color: var(--clr-primary-green);
+
+          &::placeholder {
+            font-size: 1.5rem;
+            color: #ccc;
+          }
         }
       }
 
-      .right {
-        .formGroup {
-          gap: 4rem;
+      .toggle {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
-          textarea {
-            resize: none;
-          }
+        label {
+          display: inline-block;
+          font-size: 1.8rem;
+          color: gray;
+        }
+      }
+    }
+
+    .left {
+      button {
+        display: inline-block;
+        border: none;
+        outline: none;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1.8rem;
+        padding: 2rem;
+        background-color: var(--clr-primary-green);
+        color: var(--clr-white);
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      .formGroup {
+        gap: 4rem;
+
+        textarea {
+          resize: none;
         }
       }
     }
