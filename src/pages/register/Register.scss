@@ -10,6 +10,11 @@
     display: flex;
     gap: 20rem;
 
+    h1 {
+      color: gray;
+      margin-bottom: 2rem;
+    }
+
     .left,
     .right {
       flex: 1;
@@ -18,12 +23,6 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 1rem;
-
-      h1 {
-        font-weight: 300;
-        color: gray;
-        margin-bottom: 3rem;
-      }
 
       .formGroup {
         display: flex;
