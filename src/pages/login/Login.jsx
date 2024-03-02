@@ -48,36 +48,32 @@ const Login = () => {
 
   return (
     <main className='login'>
-      <div className='container'>
-        <div className='wrapper'>
-          <form onSubmit={handleSubmit}>
-            <h1>Sign in</h1>
-            <div className='formGroup'>
-              <label htmlFor='username'>Username</label>
-              <input
-                type='text'
-                id='username'
-                name='username'
-                ref={usernameRef}
-                placeholder='johndoe'
-                onChange={handleChange}
-              />
-            </div>
-            <div className='formGroup'>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                name='password'
-                placeholder='********'
-                onChange={handleChange}
-              />
-            </div>
-            <button type='submit'>Login</button>
-            <span>{error && error}</span>
-          </form>
+      <form onSubmit={handleSubmit}>
+        <h1>Sign in</h1>
+        <div className='formGroup'>
+          <label htmlFor='username'>Username</label>
+          <input
+            type='text'
+            id='username'
+            name='username'
+            ref={usernameRef}
+            placeholder='johndoe'
+            onChange={handleChange}
+          />
         </div>
-      </div>
+        <div className='formGroup'>
+          <label htmlFor='password'>Password</label>
+          <input
+            type='password'
+            id='password'
+            name='password'
+            placeholder='********'
+            onChange={handleChange}
+          />
+        </div>
+        <button type='submit'>Login</button>
+        <span>{error && error}</span>
+      </form>
     </main>
   );
 };
