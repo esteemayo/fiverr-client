@@ -94,14 +94,15 @@
           border-radius: 2.4rem;
 
           &:before {
-            position: absolute;
+            display: inline-block;
             content: '';
-            height: 1.6rem;
             width: 1.6rem;
-            left: 4px;
-            bottom: 4px;
+            height: 1.6rem;
             background-color: var(--clr-white);
             border-radius: 50%;
+            position: absolute;
+            left: 4px;
+            bottom: 4px;
             -webkit-transition: 0.4s;
             transition: 0.4s;
           }
