@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './NotFound.scss';
 
 const NotFound = () => {
@@ -5,7 +7,9 @@ const NotFound = () => {
     <main className='notFound'>
       <div className='container'>
         <div className='wrapper'>
-          <img src='/svg/back_home.svg' alt='404' />
+          <Link to='/'>
+            <img src='/svg/back_home.svg' alt='404' />
+          </Link>
         </div>
       </div>
     </main>
