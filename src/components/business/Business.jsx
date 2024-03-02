@@ -27,7 +27,7 @@ const Business = () => {
           <button>Explore Fiverr Business</button>
         </div>
         <div className='item'>
-          <img src='/img/business.webp' alt='image' />
+          <img src='/img/business.webp' alt='business image' />
         </div>
       </div>
     </section>
