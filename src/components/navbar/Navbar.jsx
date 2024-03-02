@@ -2,12 +2,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import Menu from '../menu/Menu';
-import MenuOptions from '../menuOptions/MenuOptions';
+import Logo from '../logo/Logo';
 
 import { userKey, setToStorage } from '../../utils';
 import { getCurrentUser } from '../../utils/getCurrentUser';
 
 import { logout } from '../../services/authService';
+import MenuOptions from '../menuOptions/MenuOptions';
 
 import './Navbar.scss';
 
@@ -51,12 +52,7 @@ const Navbar = () => {
   return (
     <nav className={navClasses}>
       <div className='container'>
-        <div className='logo'>
-          <Link to='/'>
-            <span className='text'>fiverr</span>
-          </Link>
-          <span className='dot'>.</span>
-        </div>
+        <Logo />
         <div className='links'>
           <span>Fiverr Business</span>
           <span>Explore</span>

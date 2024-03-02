@@ -36,19 +36,6 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      font-size: 3.4rem;
-      font-weight: bold;
-
-      .text {
-        color: currentColor;
-      }
-
-      .dot {
-        color: var(--clr-primary-green);
-      }
-    }
-
     .links {
       display: flex;
       align-items: center;
