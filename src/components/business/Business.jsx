@@ -7,7 +7,9 @@ const Business = () => {
     <section className='features dark'>
       <div className='container'>
         <div className='item'>
-          <h1>fiverr business</h1>
+          <h1>
+            fiverr <i>business</i>
+          </h1>
           <h1>A business solution designed for teams</h1>
           <p>
             Upgrade to a curated experience packed with tools and benefits,
