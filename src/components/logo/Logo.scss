@@ -1,2 +1,12 @@
 .logo {
+  font-weight: bold;
+  font-size: 3.4rem;
+
+  .text {
+    color: currentColor;
+  }
+
+  .dot {
+    color: var(--clr-primary-green);
+  }
 }
