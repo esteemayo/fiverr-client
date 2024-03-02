@@ -1,11 +1,7 @@
-import { useQuery } from '@tanstack/react-query';
-
 import Star from '../star/Star';
 import Seller from '../seller/Seller';
 import Slide from '../slide/Slide';
 import Reviews from '../reviews/Reviews';
-
-import { getUser } from '../../services/userService';
 
 import './GigContent.scss';
 
@@ -18,15 +14,10 @@ const GigContent = ({
   starNumber,
   totalStars,
   createdAt,
+  isLoading,
+  error,
+  data,
 }) => {
-  const { isLoading, error, data } = useQuery({
-    queryKey: ['user'],
-    queryFn: async () => {
-      const { data } = await getUser(user);
-      return data;
-    },
-  });
-
   return (
     <section className='gigContent'>
       <span className='breadCrumbs'>FIVERR &gt; GRAPHICS & DESIGN &gt;</span>

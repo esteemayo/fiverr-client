@@ -5,6 +5,7 @@ import GigInfo from '../../components/gigInfo/GigInfo';
 import GigContent from '../../components/gigContent/GigContent';
 
 import { getGig } from '../../services/gigService';
+import { getUser } from '../../services/userService';
 
 import './Gig.scss';
 
@@ -19,6 +20,21 @@ const Gig = () => {
     },
   });
 
+  const userId = data?.user;
+
+  const {
+    isLoading: isLoadingUser,
+    error: errorUser,
+    data: dataUser,
+  } = useQuery({
+    queryKey: ['user'],
+    queryFn: async () => {
+      const { data } = await getUser(userId);
+      return data;
+    },
+    enabled: !!userId,
+  });
+
   return (
     <main className='gig'>
       {isLoading ? (
@@ -27,7 +43,12 @@ const Gig = () => {
         'Something went wrong!'
       ) : (
         <div className='container'>
-          <GigContent {...data} />
+          <GigContent
+            {...data}
+            isLoading={isLoadingUser}
+            error={errorUser}
+            data={dataUser}
+          />
           <GigInfo {...data} />
         </div>
       )}
