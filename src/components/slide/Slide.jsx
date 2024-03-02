@@ -6,7 +6,11 @@ const Slide = ({ arrowsScroll, slidesToShow, className, children }) => {
   return (
     <section className='slide'>
       <div className='container'>
-        <Slider slidesToShow={slidesToShow} arrowsScroll={arrowsScroll} className={className}>
+        <Slider
+          slidesToShow={slidesToShow}
+          arrowsScroll={arrowsScroll}
+          className={className}
+        >
           {children}
         </Slider>
       </div>
