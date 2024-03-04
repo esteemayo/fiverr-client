@@ -25,7 +25,7 @@ const Pay = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [id]);
 
   const appearance = {
     theme: 'stripe',
