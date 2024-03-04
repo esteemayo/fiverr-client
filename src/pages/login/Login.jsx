@@ -39,7 +39,7 @@ const Login = () => {
         console.log(err.response.data.message);
       }
     },
-    [data, navigate, setToStorage]
+    [data, navigate]
   );
 
   useEffect(() => {

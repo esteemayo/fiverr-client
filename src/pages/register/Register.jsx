@@ -63,7 +63,7 @@ const Register = () => {
         console.log(err);
       }
     },
-    [data, file, navigate, setToStorage]
+    [data, file, navigate]
   );
 
   return (
