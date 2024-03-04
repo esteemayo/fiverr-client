@@ -45,7 +45,7 @@ const Message = () => {
       mutate(newMessage);
       e.target[0].value = '';
     },
-    [mutate]
+    [id, mutate]
   );
 
   const messageClasses = useCallback(
