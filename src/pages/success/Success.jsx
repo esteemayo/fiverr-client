@@ -24,7 +24,7 @@ const Success = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [navigate, payment_intent]);
 
   return (
     <main className='success'>
