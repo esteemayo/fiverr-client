@@ -27,7 +27,7 @@ const Gig = () => {
     error: errorUser,
     data: dataUser,
   } = useQuery({
-    queryKey: ['user'],
+    queryKey: [`${userId}`],
     queryFn: async () => {
       const { data } = await getUser(userId);
       return data;
