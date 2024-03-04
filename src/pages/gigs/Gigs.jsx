@@ -48,7 +48,7 @@ const Gigs = () => {
 
   useEffect(() => {
     refetch();
-  }, [sort]);
+  }, [refetch, sort]);
 
   return (
     <main className='gigs'>
@@ -85,8 +85,8 @@ const Gigs = () => {
           {isLoading
             ? 'loading'
             : error
-            ? 'Something went wrong'
-            : data.map((item) => {
+              ? 'Something went wrong'
+              : data.map((item) => {
                 return <GigCard key={item._id} {...item} />;
               })}
         </div>
