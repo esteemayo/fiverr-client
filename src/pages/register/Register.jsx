@@ -136,7 +136,7 @@ const Register = () => {
           <h1>I want to become a seller</h1>
           <div className='toggle'>
             <label htmlFor='isSeller'>Activate the seller account</label>
-            <label htmlFor='' className='switch'>
+            <label htmlFor='isSeller' className='switch'>
               <input type='checkbox' id='isSeller' onChange={handleSeller} />
               <span className='slider round' />
             </label>
