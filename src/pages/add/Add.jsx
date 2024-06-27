@@ -72,7 +72,7 @@ const Add = () => {
     } finally {
       setUploading(false);
     }
-  }, [dispatch, files, singleFile, upload]);
+  }, [dispatch, files, singleFile]);
 
   const handleSubmit = useCallback(
     async (e) => {
